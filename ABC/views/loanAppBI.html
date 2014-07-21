@@ -1,0 +1,591 @@
+<div data-role="view" id="tabstrip-loanapp-bi" data-model="app.loansetting.viewModel">
+    <div data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title">
+                <div><a href="#tabstrip-home">Back</a></div>
+            </span>
+        </div>
+    </div>
+    <div  data-role="content">
+        <section>
+<form id="B2cAppForms" class="cmxform" action="dashboard-application3.html" method="post" novalidate="novalidate">
+<article id="aplicn_tp">
+<hr />
+<div class="warps clearfix">
+<ul class="app_nav">
+<li class="dn"><a href="dashboard-application.html"><span>Contact Information</span></a></li>
+<li class="activ"><span>Business Information</span></li>
+<li><span>Personal Information</span></li>
+<li><span>Financing Preferences</span></li>
+</ul>
+
+</div>
+</article>
+  
+  
+<article id="aplicn_frm"><div class="warps clearfix">
+<div class="rws clearfix">
+<div class="lftitb">Legal Business Name</div>
+<div class="rwfil">
+<input type="text" name="lbname" class="IN1" id="lbname" title="Legal Business Name"  placeholder="Legal Business Name" required />
+</div></div>
+
+
+<div class="rws rw2 clearfix">
+<div class="lftitb">Business Address</div>
+<div class="rwfil clearfix">
+<div class="rw_lin clearfix"><p><input type="text" class="IN1 ipsm1"  name="stno"  id="stno" title="Street No."  placeholder="Street No." required /></p>
+<p><input type="text" class="IN1 ipsm3"  name="sname" id="sname" title="Street Name"  placeholder="Street Name" required /></p>
+<p><input type="text" class="IN1 ipsm3" name="aptsui" id="aptsui" title="Apt/Suite/Unit"  placeholder="Apt/Suite/Unit" required /></p><br>
+</div>
+
+<div class="rw_lin clearfix">
+<p><select class="IN1b ipsm3" name="state_user"  id="state_user"  title="Select State"  onchange="displayCity_user( this.value,'');" required>
+<option value="">Select State</option>
+<option value="1">Alabama</option>
+<option value="2">Alaska</option>
+<option value="4">Arizona</option>
+<option value="5">Arkansas</option>
+<option value="9">California</option>
+<option value="10">Colorado</option>
+<option value="11">Connecticut</option>
+<option value="12">Delaware</option>
+<option value="13">District of Columbia</option>
+<option value="15">Florida</option>
+<option value="16">Georgia</option>
+<option value="18">Hawaii</option>
+<option value="19">Idaho</option>
+<option value="20">Illinois</option>
+<option value="21">Indiana</option>
+<option value="22">Iowa</option>
+<option value="23">Kansas</option>
+<option value="24">Kentucky</option>
+<option value="25">Louisiana</option>
+<option value="26">Maine</option>
+<option value="28">Maryland</option>
+<option value="29">Massachusetts</option>
+<option value="30">Michigan</option>
+<option value="31">Minnesota</option>
+<option value="32">Mississippi</option>
+<option value="33">Missouri</option>
+<option value="34">Montana</option>
+<option value="35">Nebraska</option>
+<option value="36">Nevada</option>
+<option value="37">New Hampshire</option>
+<option value="38">New Jersey</option>
+<option value="39">New Mexico</option>
+<option value="40">New York</option>
+<option value="41">North Carolina</option>
+<option value="42">North Dakota</option>
+<option value="44">Ohio</option>
+<option value="45">Oklahoma</option>
+<option value="46">Oregon</option>
+<option value="47">Pennsylvania</option>
+<option value="48">Puerto Rico</option>
+<option value="49">Rhode Island</option>
+<option value="50">South Carolina</option>
+<option value="51">South Dakota</option>
+<option value="52">Tennessee</option>
+<option value="53">Texas</option>
+<option value="54">Utah</option>
+<option value="55">Vermont</option>
+<option value="102">Virgin Islands</option>
+<option value="57">Virginia</option>
+<option value="58">Washington</option>
+<option value="60">West Virginia</option>
+<option value="61">Wisconsin</option>
+<option value="62">Wyoming</option>
+</select></p>
+
+<p><select title="Select City" class="IN1b ipsm3" id="cmbCity_user" name="cmbCity_user" required>
+<option value="">Select City</option><option value="984">Adona</option><option value="985">Alexander</option><option value="1179">Alicia</option><option value="1387">Alix</option><option value="911">Alleene</option><option value="1422">Alma</option><option value="986">Almyra</option><option value="1297">Alpena</option><option value="950">Alpine</option><option value="987">Altheimer</option><option value="1388">Altus</option><option value="988">Amagon</option><option value="951">Amity</option><option value="952">Antoine</option><option value="953">Arkadelphia</option><option value="848">Arkansas City</option><option value="1117">Armorel</option><option value="1242">Ash Flat</option><option value="912">Ashdown</option><option value="1389">Atkins</option><option value="1118">Aubrey</option><option value="989">Augusta</option><option value="990">Austin</option><option value="1346">Avoca</option><option value="991">Bald Knob</option><option value="849">Banks</option><option value="1423">Barling</option><option value="1119">Barton</option><option value="1120">Bassett</option><option value="1240">Batesville</option><option value="992">Bauxite</option><option value="1180">Bay</option><option value="880">Bearden</option><option value="1298">Beaver</option><option value="994">Bee Branch</option><option value="993">Beebe</option><option value="1181">Beech Grove</option><option value="995">Beedeville</option><option value="881">Beirne</option><option value="1348">Bella Vista</option><option value="1390">Belleville</option><option value="913">Ben Lomond</option><option value="996">Benton</option><option value="1347">Bentonville</option><option value="1299">Bergman</option><option value="1300">Berryville</option><option value="1243">Bexar</option><option value="1301">Big Flat</option><option value="997">Bigelow</option><option value="1182">Biggers</option><option value="998">Biscoe</option><option value="954">Bismarck</option><option value="1183">Black Oak</option><option value="1184">Black Rock</option><option value="914">Blevins</option><option value="1391">Blue Mountain</option><option value="882">Bluff City</option><option value="1392">Bluffton</option><option value="1121">Blytheville</option><option value="955">Board Camp</option><option value="1424">Boles</option><option value="956">Bonnerdale</option><option value="1185">Bono</option><option value="1425">Booneville</option><option value="999">Bradford</option><option value="915">Bradley</option><option value="1426">Branch</option><option value="1123">Brickeys</option><option value="1393">Briggsville</option><option value="1000">Brinkley</option><option value="1244">Brockwell</option><option value="1186">Brookland</option><option value="1001">Bryant</option><option value="916">Buckner</option><option value="1302">Bull Shoals</option><option value="1124">Burdette</option><option value="1002">Cabot</option><option value="957">Caddo Gap</option><option value="1125">Caldwell</option><option value="917">Cale</option><option value="1245">Calico Rock</option><option value="883">Calion</option><option value="879">Camden</option><option value="1246">Camp</option><option value="1349">Canehill</option><option value="1187">Caraway</option><option value="1003">Carlisle</option><option value="884">Carthage</option><option value="1004">Casa</option><option value="1188">Cash</option><option value="1005">Casscoe</option><option value="1247">Cave City</option><option value="1350">Cave Springs</option><option value="1427">Cecil</option><option value="1428">Cedarville</option><option value="1006">Center Ridge</option><option value="1351">Centerton</option><option value="1394">Centerville</option><option value="1429">Charleston</option><option value="1248">Charlotte</option><option value="1251">Cherokee Village</option><option value="1126">Cherry Valley</option><option value="1430">Chester</option><option value="885">Chidester</option><option value="1007">Choctaw</option><option value="1008">Clarendon</option><option value="1127">Clarkedale</option><option value="1303">Clarkridge</option><option value="1395">Clarksville</option><option value="1009">Cleveland</option><option value="1010">Clinton</option><option value="1396">Coal Hill</option><option value="1027">College Station</option><option value="1128">Colt</option><option value="918">Columbus</option><option value="1352">Combs</option><option value="1304">Compton</option><option value="1249">Concord</option><option value="1011">Conway</option><option value="1250">Cord</option><option value="1189">Corning</option><option value="1305">Cotter</option><option value="1012">Cotton Plant</option><option value="958">Cove</option><option value="1013">Coy</option><option value="1129">Crawfordsville</option><option value="1014">Crocketts Bluff</option><option value="850">Crossett</option><option value="1130">Crumrod</option><option value="886">Curtis</option><option value="1252">Cushman</option><option value="1015">Damascus</option><option value="1397">Danville</option><option value="1398">Dardanelle</option><option value="1190">Datto</option><option value="919">De Queen</option><option value="1017">De Valls Bluff</option><option value="1018">De Witt</option><option value="1353">Decatur</option><option value="1306">Deer</option><option value="1191">Delaplaine</option><option value="1399">Delaware</option><option value="959">Delight</option><option value="1192">Dell</option><option value="1307">Dennard</option><option value="851">Dermott</option><option value="1016">Des Arc</option><option value="1253">Desha</option><option value="1308">Diamond City</option><option value="1019">Diaz</option><option value="920">Dierks</option><option value="921">Doddridge</option><option value="1254">Dolph</option><option value="960">Donaldson</option><option value="1400">Dover</option><option value="1255">Drasco</option><option value="1131">Driver</option><option value="852">Dumas</option><option value="1431">Dyer</option><option value="1132">Dyess</option><option value="1133">Earle</option><option value="1020">Edgemont</option><option value="1134">Edmondson</option><option value="1193">Egypt</option><option value="887">El Dorado</option><option value="1021">El Paso</option><option value="1135">Elaine</option><option value="1256">Elizabeth</option><option value="1354">Elkins</option><option value="1355">Elm Springs</option><option value="888">Emerson</option><option value="922">Emmet</option><option value="1022">England</option><option value="1023">Enola</option><option value="1024">Ethel</option><option value="1194">Etowah</option><option value="853">Eudora</option><option value="1309">Eureka Springs</option><option value="1356">Evansville</option><option value="1257">Evening Shade</option><option value="1310">Everton</option><option value="1056">Fairfield Bay</option><option value="1357">Farmington</option><option value="1345">Fayetteville</option><option value="1258">Fifty Six</option><option value="1195">Fisher</option><option value="1311">Flippin</option><option value="1259">Floral</option><option value="889">Fordyce</option><option value="923">Foreman</option><option value="1136">Forrest City</option><option value="1421">Fort Smith</option><option value="924">Fouke</option><option value="854">Fountain Hill</option><option value="1025">Fox</option><option value="1260">Franklin</option><option value="1137">Frenchmans Bayou</option><option value="961">Friendship</option><option value="925">Fulton</option><option value="1261">Gamaliel</option><option value="1358">Garfield</option><option value="926">Garland City</option><option value="1026">Garner</option><option value="1312">Gassville</option><option value="1359">Gateway</option><option value="927">Genoa</option><option value="1360">Gentry</option><option value="1262">Gepp</option><option value="1313">Gilbert</option><option value="1028">Gillett</option><option value="928">Gillham</option><option value="1138">Gilmore</option><option value="1263">Glencoe</option><option value="962">Glenwood</option><option value="1139">Goodwin</option><option value="1361">Goshen</option><option value="1122">Gosnell</option><option value="855">Gould</option><option value="856">Grady</option><option value="963">Grannis</option><option value="1029">Grapevine</option><option value="1401">Gravelly</option><option value="1362">Gravette</option><option value="1314">Green Forest</option><option value="1030">Greenbrier</option><option value="1363">Greenland</option><option value="1196">Greenway</option><option value="1432">Greenwood</option><option value="1031">Gregory</option><option value="1032">Griffithville</option><option value="1197">Grubbs</option><option value="1264">Guion</option><option value="890">Gurdon</option><option value="1033">Guy</option><option value="1433">Hackett</option><option value="1402">Hagarville</option><option value="857">Hamburg</option><option value="891">Hampton</option><option value="1265">Hardy</option><option value="892">Harrell</option><option value="1315">Harriet</option><option value="1198">Harrisburg</option><option value="1296">Harrison</option><option value="1434">Hartford</option><option value="1403">Hartman</option><option value="1404">Harvey</option><option value="1316">Hasty</option><option value="964">Hatfield</option><option value="1034">Hattieville</option><option value="1405">Havana</option><option value="1140">Haynes</option><option value="1035">Hazen</option><option value="1266">Heber Springs</option><option value="1406">Hector</option><option value="1141">Helena</option><option value="1267">Henderson</option><option value="1036">Hensley</option><option value="858">Hermitage</option><option value="1142">Heth</option><option value="1037">Hickory Plains</option><option value="1143">Hickory Ridge</option><option value="1038">Higden</option><option value="1039">Higginson</option><option value="1364">Hindsville</option><option value="1365">Hiwasse</option><option value="1040">Holly Grove</option><option value="910">Hope</option><option value="929">Horatio</option><option value="1241">Horseshoe Bend</option><option value="948">Hot Springs National Park</option><option value="949">Hot Springs Village</option><option value="1041">Houston</option><option value="1199">Hoxie</option><option value="1144">Hughes</option><option value="1042">Humnoke</option><option value="1043">Humphrey</option><option value="1044">Hunter</option><option value="1435">Huntington</option><option value="1366">Huntsville</option><option value="893">Huttig</option><option value="1268">Ida</option><option value="1200">Imboden</option><option value="894">Ivan</option><option value="1045">Jacksonport</option><option value="1046">Jacksonville</option><option value="1317">Jasper</option><option value="1047">Jefferson</option><option value="859">Jersey</option><option value="1048">Jerusalem</option><option value="965">Jessieville</option><option value="1367">Johnson</option><option value="1145">Joiner</option><option value="1062">Jones Mill</option><option value="1178">Jonesboro</option><option value="1049">Judsonia</option><option value="895">Junction City</option><option value="1146">Keiser</option><option value="1050">Kensett</option><option value="1051">Keo</option><option value="860">Kingsland</option><option value="1368">Kingston</option><option value="966">Kirby</option><option value="1201">Knobel</option><option value="1407">Knoxville</option><option value="1147">La Grange</option><option value="1202">Lafe</option><option value="1203">Lake City</option><option value="861">Lake Village</option><option value="1318">Lakeview</option><option value="1408">Lamar</option><option value="1148">Lambrook</option><option value="930">Laneburg</option><option value="967">Langley</option><option value="1436">Lavaca</option><option value="896">Lawson</option><option value="1204">Leachville</option><option value="1319">Lead Hill</option><option value="1052">Leola</option><option value="1149">Lepanto</option><option value="1320">Leslie</option><option value="1053">Letona</option><option value="931">Lewisville</option><option value="1150">Lexa</option><option value="1205">Light</option><option value="1369">Lincoln</option><option value="1115">Little Rock</option><option value="1057">Little Rock Air Force Base</option><option value="932">Lockesburg</option><option value="1269">Locust Grove</option><option value="1409">London</option><option value="1054">Lonoke</option><option value="1055">Lonsdale</option><option value="897">Louann</option><option value="1370">Lowell</option><option value="1151">Luxora</option><option value="1206">Lynn</option><option value="1060">Mabelvale</option><option value="1152">Madison</option><option value="1437">Magazine</option><option value="1270">Magness</option><option value="899">Magnolia</option><option value="1061">Malvern</option><option value="1271">Mammoth Spring</option><option value="1208">Manila</option><option value="1438">Mansfield</option><option value="1321">Marble Falls</option><option value="1272">Marcella</option><option value="1153">Marianna</option><option value="1154">Marion</option><option value="1155">Marked Tree</option><option value="1209">Marmaduke</option><option value="1322">Marshall</option><option value="1156">Marvell</option><option value="1069">Maumelle</option><option value="1063">Mayflower</option><option value="1210">Maynard</option><option value="1371">Maysville</option><option value="933">Mc Caskill</option><option value="1058">Mc Crory</option><option value="1207">Mc Dougal</option><option value="862">Mc Gehee</option><option value="898">Mc Neil</option><option value="1059">Mc Rae</option><option value="1273">Melbourne</option><option value="1157">Mellwood</option><option value="968">Mena</option><option value="1064">Menifee</option><option value="1439">Midland</option><option value="1323">Midway</option><option value="934">Mineral Springs</option><option value="1211">Minturn</option><option value="1212">Monette</option><option value="1065">Monroe</option><option value="863">Monticello</option><option value="864">Montrose</option><option value="1158">Moro</option><option value="1066">Morrilton</option><option value="1372">Morrow</option><option value="865">Moscow</option><option value="900">Mount Holly</option><option value="970">Mount Ida</option><option value="1325">Mount Judea</option><option value="1275">Mount Pleasant</option><option value="1067">Mount Vernon</option><option value="1324">Mountain Home</option><option value="969">Mountain Pine</option><option value="1274">Mountain View</option><option value="1440">Mountainburg</option><option value="1441">Mulberry</option><option value="971">Murfreesboro</option><option value="935">Nashville</option><option value="1442">Natural Dam</option><option value="1410">New Blaine</option><option value="866">New Edinburg</option><option value="1276">Newark</option><option value="972">Newhope</option><option value="1068">Newport</option><option value="1327">Norfork</option><option value="973">Norman</option><option value="901">Norphlet</option><option value="1070">North Little Rock</option><option value="1213">O Kean</option><option value="1328">Oak Grove</option><option value="1329">Oakland</option><option value="1411">Oark</option><option value="974">Oden</option><option value="936">Ogden</option><option value="1277">Oil Trough</option><option value="975">Okolona</option><option value="1412">Ola</option><option value="1330">Omaha</option><option value="1159">Oneida</option><option value="1331">Onia</option><option value="1160">Osceola</option><option value="1278">Oxford</option><option value="938">Ozan</option><option value="1443">Ozark</option><option value="1413">Ozone</option><option value="1161">Palestine</option><option value="1072">Pangburn</option><option value="1214">Paragould</option><option value="1414">Paris</option><option value="867">Parkdale</option><option value="1162">Parkin</option><option value="1444">Parks</option><option value="1073">Paron</option><option value="1332">Parthenon</option><option value="1074">Patterson</option><option value="1373">Pea Ridge</option><option value="1215">Peach Orchard</option><option value="976">Pearcy</option><option value="1333">Peel</option><option value="1415">Pelsor</option><option value="977">Pencil Bluff</option><option value="1075">Perry</option><option value="1076">Perryville</option><option value="1374">Pettigrew</option><option value="868">Pickens</option><option value="1216">Piggott</option><option value="1334">Pindall</option><option value="846">Pine Bluff</option><option value="1279">Pineville</option><option value="1416">Plainview</option><option value="1280">Pleasant Grove</option><option value="1281">Pleasant Plains</option><option value="1077">Plumerville</option><option value="1217">Pocahontas</option><option value="1218">Pollard</option><option value="1335">Ponca</option><option value="1163">Poplar Grove</option><option value="1219">Portia</option><option value="869">Portland</option><option value="1417">Pottsville</option><option value="1282">Poughkeepsie</option><option value="1220">Powhatan</option><option value="1078">Poyen</option><option value="1375">Prairie Grove</option><option value="1079">Prattsville</option><option value="939">Prescott</option><option value="1080">Prim</option><option value="1164">Proctor</option><option value="1336">Pyatt</option><option value="1081">Quitman</option><option value="1445">Ratcliff</option><option value="1221">Ravenden</option><option value="1222">Ravenden Springs</option><option value="1223">Rector</option><option value="1082">Redfield</option><option value="1083">Reydell</option><option value="1224">Reyno</option><option value="870">Rison</option><option value="1165">Rivervale</option><option value="1084">Roe</option><option value="1376">Rogers</option><option value="1085">Roland</option><option value="1086">Romance</option><option value="1087">Rose Bud</option><option value="1283">Rosie</option><option value="940">Rosston</option><option value="1418">Rover</option><option value="978">Royal</option><option value="1446">Rudy</option><option value="1088">Russell</option><option value="1386">Russellville</option><option value="1284">Saffell</option><option value="1285">Sage</option><option value="1089">Saint Charles</option><option value="1225">Saint Francis</option><option value="1337">Saint Joe</option><option value="1377">Saint Paul</option><option value="1286">Salado</option><option value="1287">Salem</option><option value="941">Saratoga</option><option value="1090">Scotland</option><option value="1091">Scott</option><option value="1419">Scranton</option><option value="1092">Searcy</option><option value="1226">Sedgwick</option><option value="1093">Sheridan</option><option value="1094">Sherrill</option><option value="1071">Sherwood</option><option value="1095">Shirley</option><option value="1288">Sidney</option><option value="1378">Siloam Springs</option><option value="979">Sims</option><option value="902">Smackover</option><option value="1227">Smithville</option><option value="1166">Snow Lake</option><option value="1096">Solgohachia</option><option value="903">Sparkman</option><option value="1379">Springdale</option><option value="1097">Springfield</option><option value="942">Stamps</option><option value="871">Star City</option><option value="1228">State University</option><option value="904">Stephens</option><option value="980">Story</option><option value="1229">Strawberry</option><option value="905">Strong</option><option value="1289">Sturkie</option><option value="1098">Stuttgart</option><option value="1420">Subiaco</option><option value="1230">Success</option><option value="1290">Sulphur Rock</option><option value="1380">Sulphur Springs</option><option value="1381">Summers</option><option value="1338">Summit</option><option value="1099">Sweet Home</option><option value="1231">Swifton</option><option value="943">Taylor</option><option value="937">Texarkana</option><option value="1100">Thida</option><option value="906">Thornton</option><option value="1101">Tichnor</option><option value="872">Tillar</option><option value="1339">Tilly</option><option value="1326">Timbo</option><option value="1382">Tontitown</option><option value="1102">Traskwood</option><option value="1232">Trumann</option><option value="1103">Tucker</option><option value="1233">Tuckerman</option><option value="1291">Tumbling Shoals</option><option value="1104">Tupelo</option><option value="1167">Turner</option><option value="1168">Turrell</option><option value="1169">Tyronza</option><option value="1105">Ulm</option><option value="981">Umpire</option><option value="1447">Uniontown</option><option value="907">Urbana</option><option value="1340">Valley Springs</option><option value="1448">Van Buren</option><option value="982">Vandervoort</option><option value="1170">Vanndale</option><option value="1341">Vendor</option><option value="1106">Vilonia</option><option value="1292">Viola</option><option value="1293">Violet Hill</option><option value="1171">Wabash</option><option value="1107">Wabbaseka</option><option value="1234">Walcott</option><option value="1235">Waldenburg</option><option value="908">Waldo</option><option value="1449">Waldron</option><option value="1236">Walnut Ridge</option><option value="1108">Ward</option><option value="1237">Warm Springs</option><option value="873">Warren</option><option value="944">Washington</option><option value="874">Watson</option><option value="1238">Weiner</option><option value="1383">Wesley</option><option value="1384">West Fork</option><option value="1172">West Helena</option><option value="1116">West Memphis</option><option value="1109">West Point</option><option value="1173">West Ridge</option><option value="1342">Western Grove</option><option value="1174">Wheatley</option><option value="909">Whelen Springs</option><option value="847">White Hall</option><option value="983">Wickes</option><option value="1294">Wideman</option><option value="1175">Widener</option><option value="1110">Wilburn</option><option value="1239">Williford</option><option value="945">Willisville</option><option value="875">Wilmar</option><option value="876">Wilmot</option><option value="1176">Wilson</option><option value="946">Wilton</option><option value="877">Winchester</option><option value="1450">Winslow</option><option value="947">Winthrop</option><option value="1295">Wiseman</option><option value="1385">Witter</option><option value="1343">Witts Springs</option><option value="1111">Woodson</option><option value="1112">Wooster</option><option value="1113">Wright</option><option value="1114">Wrightsville</option><option value="1177">Wynne</option><option value="1344">Yellville</option><option value="878">Yorktown</option>
+</select></p>
+                                  
+
+<p><input type="text" class="IN1 ipsm1" name="zcode"  id="zcode" title="Zip Code" placeholder="Zip Code" required /></p>
+</div>
+</div></div>
+
+
+
+<div class="rws clearfix">
+<div class="lftitb">Basic Basic Information</div>
+<div class="rwfil">
+<div class="rw_lin clearfix">
+<p><select onChange="javascript:showhidebann(this.value);" class="IN3" id="blegal" name="blegal" title="Select Business Legal Structure"  required>
+              <option value="" selected="selected">Select Business Legal Structure</option>
+              <option value="Sole Proprietorship">Sole Proprietorship</option>
+              <option value="Corporation">Corporation</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Non Profit Corp">Non Profit Corp</option>
+              <option value="Limited Liability Company">Limited Liability Company</option>
+              <option value="Limited Partnership">Limited Partnership</option>
+</select></p>
+</div>
+     
+<div class="rw_lin hlp clearfix">  
+<p><select name="orgtype" id="orgtype" class="IN5 input_boxreg" onChange="displayorgCategory(this.value);"  title='Select Industry'  required>
+<option value="">Select Industry</option>
+<option value="17" >Accommodation and Food Services</option>
+<option value="13" >Administrative, Support, Waste Management, Remediation Services</option>
+<option value="1" >Agriculture, Forestry, Fishing and Hunting</option>
+<option value="16" >Arts, Entertainment, and Recreation</option>
+<option value="4" >Construction</option>
+<option value="14" >Educational Services</option>
+<option value="10" >Finance and Insurance</option>
+<option value="15" >Health Care and Social Assistance</option>
+<option value="9" >Information Technology</option>
+<option value="5" >Manufacturing</option>
+<option value="2" >Mining, Quarrying, and Oil and Gas Extraction</option>
+<option value="18" >Other Services (except Public Administration)</option>
+<option value="12" >Professional, Scientific, and Technical Services</option>
+<option value="19" >Public Administration</option>
+<option value="11" >Real Estate and Rental Leasing</option>
+<option value="20" >Research and Development</option>
+<option value="7" >Retail Trade</option>
+<option value="8" >Transportation and Warehousing</option>
+<option value="3" >Utilities </option>
+<option value="6" >Wholesale Trade</option>
+</select>
+
+</p>
+<a href="#" class="que_hint flf">&nbsp;</a>
+<div class="tooltip">
+<span class="tpar"></span>
+<div><h6>Industry</h6>
+<p>Find the industry and sub-industry that best describe your business. Classification is based on the North American Industry Classification System</p>
+</div></div>
+
+<p><select name="orgcategory" id="orgcategory" class="IN5"    title='Select Sub Industry'  required>
+<option value="">Select Sub Industry</option>
+</select>
+</p>
+</div>
+
+<div class="rw_lin hlp clearfix">  
+<p><select name="year" id="year" class="IN5" title="Select Age of Business (Years)"  required>
+     <option value="" selected="selected">Select Age of Business (Years)</option>
+                            <option value="0" >0</option>
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>
+                            <option value="12" >12</option>
+                            <option value="13" >13</option>
+                            <option value="14" >14</option>
+                            <option value="15" >15</option>
+                            <option value="16" >16</option>
+                            <option value="17" >17</option>
+                            <option value="18" >18</option>
+                            <option value="19" >19</option>
+                            <option value="20" >20</option>
+                            <option value="21" >21</option>
+                            <option value="22" >22</option>
+                            <option value="23" >23</option>
+                            <option value="24" >24</option>
+                            <option value="25" >25</option>
+                            <option value="26" >26</option>
+                            <option value="27" >27</option>
+                            <option value="28" >28</option>
+                            <option value="29" >29</option>
+                            <option value="30" >30</option>
+                            <option value="31" >31</option>
+                            <option value="32" >32</option>
+                            <option value="33" >33</option>
+                            <option value="34" >34</option>
+                            <option value="35" >35</option>
+                            <option value="36" >36</option>
+                            <option value="37" >37</option>
+                            <option value="38" >38</option>
+                            <option value="39" >39</option>
+                            <option value="40" >40</option>
+                            <option value="41" >41</option>
+                            <option value="42" >42</option>
+                            <option value="43" >43</option>
+                            <option value="44" >44</option>
+                            <option value="45" >45</option>
+                            <option value="46" >46</option>
+                            <option value="47" >47</option>
+                            <option value="48" >48</option>
+                            <option value="49" >49</option>
+                            <option value="50" >50</option>
+                            <option value="51" >51</option>
+                            <option value="52" >52</option>
+                            <option value="53" >53</option>
+                            <option value="54" >54</option>
+                            <option value="55" >55</option>
+                            <option value="56" >56</option>
+                            <option value="57" >57</option>
+                            <option value="58" >58</option>
+                            <option value="59" >59</option>
+                            <option value="60" >60</option>
+                            <option value="61" >61</option>
+                            <option value="62" >62</option>
+                            <option value="63" >63</option>
+                            <option value="64" >64</option>
+                            <option value="65" >65</option>
+                            <option value="66" >66</option>
+                            <option value="67" >67</option>
+                            <option value="68" >68</option>
+                            <option value="69" >69</option>
+                            <option value="70" >70</option>
+                            <option value="71" >71</option>
+                            <option value="72" >72</option>
+                            <option value="73" >73</option>
+                            <option value="74" >74</option>
+                            <option value="75" >75</option>
+                            <option value="76" >76</option>
+                            <option value="77" >77</option>
+                            <option value="78" >78</option>
+                            <option value="79" >79</option>
+                            <option value="80" >80</option>
+                            <option value="81" >81</option>
+                            <option value="82" >82</option>
+                            <option value="83" >83</option>
+                            <option value="84" >84</option>
+                            <option value="85" >85</option>
+                            <option value="86" >86</option>
+                            <option value="87" >87</option>
+                            <option value="88" >88</option>
+                            <option value="89" >89</option>
+                            <option value="90" >90</option>
+                            <option value="91" >91</option>
+                            <option value="92" >92</option>
+                            <option value="93" >93</option>
+                            <option value="94" >94</option>
+                            <option value="95" >95</option>
+                            <option value="96" >96</option>
+                            <option value="97" >97</option>
+                            <option value="98" >98</option>
+                            <option value="99" >99</option>
+                            <option value="100" >100</option>         
+   </select>
+</p>
+<a href="#" class="que_hint flf">&nbsp;</a>
+<div class="tooltip">
+<span class="tpar"></span>
+<div><h6>Age of Business (Years)</h6>
+<p>The time since the company was legally incepted. If the company is a startup, please select 0 year and 0 month.</p>
+</div></div>
+
+
+<p><select name="month" id="month" class="IN5" title="Select Age of Business (Months)"  required>
+    <option value="">Select Age of Business (Months)</option>
+                            <option value="0" >0</option>
+                            <option value="1" >1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                            <option value="4" >4</option>
+                            <option value="5" >5</option>
+                            <option value="6" >6</option>
+                            <option value="7" >7</option>
+                            <option value="8" >8</option>
+                            <option value="9" >9</option>
+                            <option value="10" >10</option>
+                            <option value="11" >11</option>       
+   </select>
+</p>
+
+<a href="#" class="que_hint flf">&nbsp;</a>
+<div class="tooltip">
+<span class="tpar"></span>
+<div><h6>Age of Business (Months)</h6>
+<p>The time since the company was legally incepted. If the company is a startup, please select 0 year and 0 month.</p>
+</div></div>
+</div>
+
+
+
+<div class="rw_lin hlp clearfix">  
+<p><input type="text"  class="IN6" title="Average Annual Revenue" placeholder="Average Annual Revenue" name="revenue" id="revenue" onBlur="addComma(this.form.operatingexp);" required /></p>
+<a href="#" class="que_hint flf">&nbsp;</a>
+<div class="tooltip">
+<span class="tpar"></span>
+<div><h6>Business Operating Expenses</h6>
+<p>For <b>startups</b> please enter 0. For businesses <b>less than 1 year</b>, please enter the actual expenses realized. <b>For business more than 1 year old</b>, please enter operating expenses as reported on tax returns.</p>
+</div></div>
+<p><input type="text"  class="IN6" title="Business Operating Expenses" placeholder="Business Operating Expenses" name="operatingexp" id="operatingexp" required /></p>
+<a href="#" class="que_hint flf">&nbsp;</a>
+<div class="tooltip">
+<span class="tpar"></span>
+<div><h6>Business Operating Expenses</h6>
+<p>For <b>startups</b> please enter 0. For businesses <b>less than 1 year</b>, please enter the actual expenses realized. <b>For business more than 1 year old</b>, please enter operating expenses as reported on tax returns.</p>
+</div></div>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div class="rws clearfix">
+<div class="lftitb">Does the Business Accept Credit Cards?</div>
+<div class="rwfil">
+<div class="rw_lin clearfix">
+<span><input type="radio" class="crditaccep" name="acceptcard" id="acceptcard" value="1" /><label for="yes">Yes</label></span>
+<span><input name="acceptcard" type="radio" class="crditaccep" id="acceptcard" value="0" /><label for="no">No</label></span>
+</div>
+
+<div class="rwfil">
+<!-- credit accepted--><div id="credit_show" class="showfilds_bx">
+<div class="rw_lin clearfix">  
+<div class="labl_tx">Date of the Credit Card first Processed</div>
+<p class="imp33"><select class="IN1b ipsm1" title="Month" name="datefirstProcessed_month" id="datefirstProcessed_month" >
+<option value="">Month</option>
+             <option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select></p>
+<p class="imp33"><select class="IN1b ipsm1" title="Day" name="datefirstProcessed_day" id="datefirstProcessed_day" >
+<option value="">Day</option>
+                            <option value="01">1</option>
+                            <option value="02">2</option>
+                            <option value="03">3</option>
+                            <option value="04">4</option>
+                            <option value="05">5</option>
+                            <option value="06">6</option>
+                            <option value="07">7</option>
+                            <option value="08">8</option>
+                            <option value="09">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+</select></p>
+       
+<p class="imp33"><select class="IN1b  ipsm1" title="Year" name="datefirstProcessed_year" id="datefirstProcessed_year" >
+<option value="">Year</option>
+                            <option value="1950">1950</option>
+                            <option value="1951">1951</option>
+                            <option value="1952">1952</option>
+                            <option value="1953">1953</option>
+                            <option value="1954">1954</option>
+                            <option value="1955">1955</option>
+                            <option value="1956">1956</option>
+                            <option value="1957">1957</option>
+                            <option value="1958">1958</option>
+                            <option value="1959">1959</option>
+                            <option value="1960">1960</option>
+                            <option value="1961">1961</option>
+                            <option value="1962">1962</option>
+                            <option value="1963">1963</option>
+                            <option value="1964">1964</option>
+                            <option value="1965">1965</option>
+                            <option value="1966">1966</option>
+                            <option value="1967">1967</option>
+                            <option value="1968">1968</option>
+                            <option value="1969">1969</option>
+                            <option value="1970">1970</option>
+                            <option value="1971">1971</option>
+
+                            <option value="1972">1972</option>
+                            <option value="1973">1973</option>
+                            <option value="1974">1974</option>
+                            <option value="1975">1975</option>
+                            <option value="1976">1976</option>
+                            <option value="1977">1977</option>
+                            <option value="1978">1978</option>
+                            <option value="1979">1979</option>
+                            <option value="1980">1980</option>
+                            <option value="1981">1981</option>
+                            <option value="1982">1982</option>
+                            <option value="1983">1983</option>
+                            <option value="1984">1984</option>
+                            <option value="1985">1985</option>
+                            <option value="1986">1986</option>
+                            <option value="1987">1987</option>
+                            <option value="1988">1988</option>
+                            <option value="1989">1989</option>
+                            <option value="1990">1990</option>
+                            <option value="1991">1991</option>
+                            <option value="1992">1992</option>
+                            <option value="1993">1993</option>
+                            <option value="1994">1994</option>
+                            <option value="1995">1995</option>
+                            <option value="1996">1996</option>
+                            <option value="1997">1997</option>
+                            <option value="1998">1998</option>
+                            <option value="1999">1999</option>
+                            <option value="2000">2000</option>
+                            <option value="2001">2001</option>
+                            <option value="2002">2002</option>
+                            <option value="2003">2003</option>
+                            <option value="2004">2004</option>
+                            <option value="2005">2005</option>
+                            <option value="2006">2006</option>
+                            <option value="2007">2007</option>
+                            <option value="2008">2008</option>
+                            <option value="2009">2009</option>
+                            <option value="2010">2010</option>
+                            <option value="2011">2011</option>
+                            <option value="2012">2012</option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+</select></p>
+</div>
+<div class="rw_lin clearfix">  
+<p><select name="creditcardproc" id="creditcardproc" class="IN3" title="Current Credit Card Processor">
+<option value="">Select Current Credit Card Processor</option><option value="Not in List">Not in List</option><option value="1Card@Atime (Lockbox)">1Card@Atime (Lockbox)</option><option value="1st AmeriCard (Lockbox)">1st AmeriCard (Lockbox)</option><option value="1st Financial Merchant Group (Lockbox)">1st Financial Merchant Group (Lockbox)</option><option value="1st National Processing (Lockbox)">1st National Processing (Lockbox)</option><option value="2C Processor USA (Lockbox)">2C Processor USA (Lockbox)</option><option value="2nd Source">2nd Source</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="A1 Bank Services 4U">A1 Bank Services 4U</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="AAMONTE Bankcard (Lockbox)">AAMONTE Bankcard (Lockbox)</option><option value="ABC Global Systems (Lockbox)">ABC Global Systems (Lockbox)</option><option value="ABC Processing (Lockbox)">ABC Processing (Lockbox)</option><option value="Abteck (Lockbox)">Abteck (Lockbox)</option><option value="Access Fleet Inc. (Lockbox)">Access Fleet Inc. (Lockbox)</option><option value="ACCESS GROUP PROCESSING (Lockbox)">ACCESS GROUP PROCESSING (Lockbox)</option><option value="ACCESS GROUP PROCESSING (Lockbox)">ACCESS GROUP PROCESSING (Lockbox)</option><option value="ACE Bankcard Services (Lockbox)">ACE Bankcard Services (Lockbox)</option><option value="ACE Merchant Processing (Lockbox)">ACE Merchant Processing (Lockbox)</option><option value="ACH Debit (Bankcard Funding) (Lockbox)">ACH Debit (Bankcard Funding) (Lockbox)</option><option value="ACI Merchant Systems (Lockbox)">ACI Merchant Systems (Lockbox)</option><option value="ADK Merchant Services">ADK Merchant Services</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="ADPA Merchant Services (Lockbox)">ADPA Merchant Services (Lockbox)</option><option value="Advance Payment Services (Lockbox)">Advance Payment Services (Lockbox)</option><option value="Advanced Merchant Services (Lockbox)">Advanced Merchant Services (Lockbox)</option><option value="Affinity Payments (Lockbox)">Affinity Payments (Lockbox)</option><option value="Aliant Payment Systems (Lockbox)">Aliant Payment Systems (Lockbox)</option><option value="Alliance Merchant Service (Lockbox)">Alliance Merchant Service (Lockbox)</option><option value="Allied Bancard (Lockbox)">Allied Bancard (Lockbox)</option><option value="Allstate Merchant Servies (Lockbox)">Allstate Merchant Servies (Lockbox)</option><option value="Alpha Card Services (Lockbox)">Alpha Card Services (Lockbox)</option><option value="Alpine Payment Systems (Lockbox)">Alpine Payment Systems (Lockbox)</option><option value="Amarillo National Bank (Lockbox)">Amarillo National Bank (Lockbox)</option><option value="Ameri Merchant (Split Batch)">Ameri Merchant (Split Batch)</option><option value="AmeriBanc National (Lockbox)">AmeriBanc National (Lockbox)</option><option value="American Bancard LLC (Lockbox)">American Bancard LLC (Lockbox)</option><option value="American Credit Card Processing Corp (Lockbox)">American Credit Card Processing Corp (Lockbox)</option><option value="American National Bank (Lockbox)">American National Bank (Lockbox)</option><option value="American National Payments (Lockbox)">American National Payments (Lockbox)</option><option value="American Payment Solutions (Lockbox)">American Payment Solutions (Lockbox)</option><option value="American Payment Systems (Lockbox)">American Payment Systems (Lockbox)</option><option value="American Savings Bank (Lockbox)">American Savings Bank (Lockbox)</option><option value="Amex (Lockbox)">Amex (Lockbox)</option><option value="AMS (Lockbox)">AMS (Lockbox)</option><option value="AMS (Lockbox)">AMS (Lockbox)</option><option value="APCO Merchant Services (Lockbox)">APCO Merchant Services (Lockbox)</option><option value="Apex (Lockbox)">Apex (Lockbox)</option><option value="Applied Merchant Systems (Lockbox)">Applied Merchant Systems (Lockbox)</option><option value="Approval Payment Solutions (Lockbox)">Approval Payment Solutions (Lockbox)</option><option value="APPstar (Lockbox)">APPstar (Lockbox)</option><option value="ARA Merchant Services (Lockbox)">ARA Merchant Services (Lockbox)</option><option value="Arvest Bank (Lockbox)">Arvest Bank (Lockbox)</option><option value="Ascent Processing">Ascent Processing</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="ASF (Lockbox)">ASF (Lockbox)</option><option value="Associated Bank Merchant Services (Lockbox)">Associated Bank Merchant Services (Lockbox)</option><option value="Authorize.Net (Lockbox)">Authorize.Net (Lockbox)</option><option value="Automated Merchants Svcs (Lockbox)">Automated Merchants Svcs (Lockbox)</option><option value="Avant Garde Market Solutions">Avant Garde Market Solutions</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Avid Payment Solutions (Lockbox)">Avid Payment Solutions (Lockbox)</option><option value="AXIA (Lockbox)">AXIA (Lockbox)</option><option value="Bancard Payment Systems (Lockbox)">Bancard Payment Systems (Lockbox)</option><option value="Banckcard Services (Lockbox)">Banckcard Services (Lockbox)</option><option value="Bancorpsouth Merchant Services (Lockbox)">Bancorpsouth Merchant Services (Lockbox)</option><option value="Banctek Solutions (Lockbox)">Banctek Solutions (Lockbox)</option><option value="Bank Associates Merchant Services (Lockbox)">Bank Associates Merchant Services (Lockbox)</option><option value="Bank Card Depot (Lockbox)">Bank Card Depot (Lockbox)</option><option value="Bank of America (Lockbox)">Bank of America (Lockbox)</option><option value="Bank of Hawaii (Lockbox)">Bank of Hawaii (Lockbox)</option><option value="Bank of the Ozarks (Lockbox)">Bank of the Ozarks (Lockbox)</option><option value="Bank of the West (Lockbox)">Bank of the West (Lockbox)</option><option value="Bank of Wyoming (Lockbox)">Bank of Wyoming (Lockbox)</option><option value="Bankcard Central (Lockbox)">Bankcard Central (Lockbox)</option><option value="Bankcard Services (Lockbox)">Bankcard Services (Lockbox)</option><option value="Bankcard USA Merchant (Lockbox)">Bankcard USA Merchant (Lockbox)</option><option value="Bankcard USA Merchant Services (Lockbox)">Bankcard USA Merchant Services (Lockbox)</option><option value="Bankers Merchant Services">Bankers Merchant Services</option><option value="Inc (Lockbox)">Inc (Lockbox)</option><option value="Banner Bank (Lockbox)">Banner Bank (Lockbox)</option><option value="Bart Group (Lockbox)">Bart Group (Lockbox)</option><option value="Batch Out (Lockbox)">Batch Out (Lockbox)</option><option value="BB&amp;T (Lockbox)">BB&amp;T (Lockbox)</option><option value="Benchmark Merchant Solutions (Split Batch)">Benchmark Merchant Solutions (Split Batch)</option><option value="Best Card">Best Card</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Best Merchant Rates (Lockbox)">Best Merchant Rates (Lockbox)</option><option value="Best Payment Solutions (Lockbox)">Best Payment Solutions (Lockbox)</option><option value="Blackstone Merchant Services (Lockbox)">Blackstone Merchant Services (Lockbox)</option><option value="Blue Pay (Lockbox)">Blue Pay (Lockbox)</option><option value="Bluefin Payment Systems (Lockbox)">Bluefin Payment Systems (Lockbox)</option><option value="Bravo Payment Systems (Lockbox)">Bravo Payment Systems (Lockbox)</option><option value="Byron Bank (Lockbox)">Byron Bank (Lockbox)</option><option value="Cambridge Payment System (Split Batch)">Cambridge Payment System (Split Batch)</option><option value="Capital Bancard (Lockbox)">Capital Bancard (Lockbox)</option><option value="Capital One Merchant Services (Lockbox)">Capital One Merchant Services (Lockbox)</option><option value="Capital Processing Network (Lockbox)">Capital Processing Network (Lockbox)</option><option value="Capitol Payment Systems (Lockbox)">Capitol Payment Systems (Lockbox)</option><option value="Capitol Payment Systems (Lockbox)">Capitol Payment Systems (Lockbox)</option><option value="Card Conoepte Merchant Services (Lockbox)">Card Conoepte Merchant Services (Lockbox)</option><option value="Card Data Services (Lockbox)">Card Data Services (Lockbox)</option><option value="Card Data Systems (Lockbox)">Card Data Systems (Lockbox)</option><option value="Card One International (Lockbox)">Card One International (Lockbox)</option><option value="Card Payment Solutions">Card Payment Solutions</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Card Payment Systems (Lockbox)">Card Payment Systems (Lockbox)</option><option value="Card Processing Systems (Lockbox)">Card Processing Systems (Lockbox)</option><option value="Card Systems">Card Systems</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Card/Pay (Lockbox)">Card/Pay (Lockbox)</option><option value="Cardfinity (Lockbox)">Cardfinity (Lockbox)</option><option value="Cardflex (Lockbox)">Cardflex (Lockbox)</option><option value="Cardpayment Solutions (Lockbox)">Cardpayment Solutions (Lockbox)</option><option value="Cardservices International (Lockbox)">Cardservices International (Lockbox)</option><option value="Cardsmart (Lockbox)">Cardsmart (Lockbox)</option><option value="Cardtech (Lockbox)">Cardtech (Lockbox)</option><option value="Carecredit/GEMB (Lockbox)">Carecredit/GEMB (Lockbox)</option><option value="Carolina First Bank (Lockbox)">Carolina First Bank (Lockbox)</option><option value="CDMS - Steuben (Lockbox)">CDMS - Steuben (Lockbox)</option><option value="CDS Electronic Payment Solution (Lockbox)">CDS Electronic Payment Solution (Lockbox)</option><option value="Central Payment Corp (Lockbox)">Central Payment Corp (Lockbox)</option><option value="Century Bankcard Services (Lockbox)">Century Bankcard Services (Lockbox)</option><option value="Century Business Solutions (Lockbox)">Century Business Solutions (Lockbox)</option><option value="Charge Card (Lockbox)">Charge Card (Lockbox)</option><option value="Chase (Lockbox)">Chase (Lockbox)</option><option value="Chesapeake Bank (Lockbox)">Chesapeake Bank (Lockbox)</option><option value="Chittenden Merchant Services (Lockbox)">Chittenden Merchant Services (Lockbox)</option><option value="Choice Merchant Solutions (Lockbox)">Choice Merchant Solutions (Lockbox)</option><option value="Citi Merchant Services (Lockbox)">Citi Merchant Services (Lockbox)</option><option value="Citizens Bank (Lockbox)">Citizens Bank (Lockbox)</option><option value="Clear Mountain Bank (Lockbox)">Clear Mountain Bank (Lockbox)</option><option value="Clear Pay Processing (Lockbox)">Clear Pay Processing (Lockbox)</option><option value="Clearent (Lockbox)">Clearent (Lockbox)</option><option value="Cnetury Bankcard (Lockbox)">Cnetury Bankcard (Lockbox)</option><option value="Co-Card Merchant Processing (Lockbox)">Co-Card Merchant Processing (Lockbox)</option><option value="COCARD (Lockbox)">COCARD (Lockbox)</option><option value="Colonial Bank (Lockbox)">Colonial Bank (Lockbox)</option><option value="Columbia Bank (Lockbox)">Columbia Bank (Lockbox)</option><option value="Comdata (Lockbox)">Comdata (Lockbox)</option><option value="Comercia Merchant Alliance (Lockbox)">Comercia Merchant Alliance (Lockbox)</option><option value="Comerica (Lockbox)">Comerica (Lockbox)</option><option value="Commerce Bank (Lockbox)">Commerce Bank (Lockbox)</option><option value="Commerce Payment Systems (Lockbox)">Commerce Payment Systems (Lockbox)</option><option value="Community Bank of Tri-County (Lockbox)">Community Bank of Tri-County (Lockbox)</option><option value="Community Merchant Services (Lockbox)">Community Merchant Services (Lockbox)</option><option value="Compass Bank (Lockbox)">Compass Bank (Lockbox)</option><option value="Concord (Lockbox)">Concord (Lockbox)</option><option value="Connect Merchant Payment Services (Lockbox)">Connect Merchant Payment Services (Lockbox)</option><option value="Continental Credit Systems (Lockbox)">Continental Credit Systems (Lockbox)</option><option value="Cornerstone Credit Services LLC (Lockbox)">Cornerstone Credit Services LLC (Lockbox)</option><option value="Costplus Merchant Solutions (Lockbox)">Costplus Merchant Solutions (Lockbox)</option><option value="Country Club Bank (Lockbox)">Country Club Bank (Lockbox)</option><option value="Creditcard Discount Services (Lockbox)">Creditcard Discount Services (Lockbox)</option><option value="Crescent Processing (Lockbox)">Crescent Processing (Lockbox)</option><option value="CSA Business Solutions (Lockbox)">CSA Business Solutions (Lockbox)</option><option value="CTS Holdings (Lockbox)">CTS Holdings (Lockbox)</option><option value="Cybersource (Lockbox)">Cybersource (Lockbox)</option><option value="Cynergydata (Lockbox)">Cynergydata (Lockbox)</option><option value="Data Link (Lockbox)">Data Link (Lockbox)</option><option value="DataNet (Split Batch)">DataNet (Split Batch)</option><option value="DataUSA (Lockbox)">DataUSA (Lockbox)</option><option value="Dependable Payment Processing Inc. (Lockbox)">Dependable Payment Processing Inc. (Lockbox)</option><option value="Digital EFT Solutions (Split Batch)">Digital EFT Solutions (Split Batch)</option><option value="Digital Financial Group (Lockbox)">Digital Financial Group (Lockbox)</option><option value="Direct Connect (Lockbox)">Direct Connect (Lockbox)</option><option value="Direct Technology Innovations (Lockbox)">Direct Technology Innovations (Lockbox)</option><option value="Discount Payment Processing (Lockbox)">Discount Payment Processing (Lockbox)</option><option value="Discover Card (Lockbox)">Discover Card (Lockbox)</option><option value="e Profit (Lockbox)">e Profit (Lockbox)</option><option value="E-Merchant Group (Split Batch)">E-Merchant Group (Split Batch)</option><option value="E-Onlinedata (Lockbox)">E-Onlinedata (Lockbox)</option><option value="Earth Payment Solutions (Lockbox)">Earth Payment Solutions (Lockbox)</option><option value="EC Metro LLC (Lockbox)">EC Metro LLC (Lockbox)</option><option value="ECHO Daily Inc. (Lockbox)">ECHO Daily Inc. (Lockbox)</option><option value="EDI Health Group/ Pay Connect (Lockbox)">EDI Health Group/ Pay Connect (Lockbox)</option><option value="Elavon (Lockbox)">Elavon (Lockbox)</option><option value="Electronic Cash Systems (Lockbox)">Electronic Cash Systems (Lockbox)</option><option value="Electronic Data Payment Systems (Lockbox)">Electronic Data Payment Systems (Lockbox)</option><option value="Electronic Exchange Systems (Lockbox)">Electronic Exchange Systems (Lockbox)</option><option value="Electronic Merchant Systems (Lockbox)">Electronic Merchant Systems (Lockbox)</option><option value="Electronic Payment Systems (Lockbox)">Electronic Payment Systems (Lockbox)</option><option value="Electronic Payments Inc (Lockbox)">Electronic Payments Inc (Lockbox)</option><option value="Electronic Processing Service (Lockbox)">Electronic Processing Service (Lockbox)</option><option value="Electronic Transaction Systems (Lockbox)">Electronic Transaction Systems (Lockbox)</option><option value="Element Payment Services Inc (Lockbox)">Element Payment Services Inc (Lockbox)</option><option value="Eliot Management Group (Lockbox)">Eliot Management Group (Lockbox)</option><option value="Elite Bankcard Network (Lockbox)">Elite Bankcard Network (Lockbox)</option><option value="Elite Merchant Solutions (Lockbox)">Elite Merchant Solutions (Lockbox)</option><option value="Elite Processing Systems (Lockbox)">Elite Processing Systems (Lockbox)</option><option value="Elitepay Global (Lockbox)">Elitepay Global (Lockbox)</option><option value="Emerald Busniess Solutions (Lockbox)">Emerald Busniess Solutions (Lockbox)</option><option value="Empire State Bank (Lockbox)">Empire State Bank (Lockbox)</option><option value="EMPS (Lockbox)">EMPS (Lockbox)</option><option value="EMPS (Lockbox)">EMPS (Lockbox)</option><option value="Encore Payment Systems (Lockbox)">Encore Payment Systems (Lockbox)</option><option value="EPAY Data Inc (Lockbox)">EPAY Data Inc (Lockbox)</option><option value="Epayment America (Lockbox)">Epayment America (Lockbox)</option><option value="Equity Commerce L.P. (Lockbox)">Equity Commerce L.P. (Lockbox)</option><option value="Equity Payment">Equity Payment</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Eschelon Merchant Services (Lockbox)">Eschelon Merchant Services (Lockbox)</option><option value="ETS (Lockbox)">ETS (Lockbox)</option><option value="EVO (Split Batch)">EVO (Split Batch)</option><option value="Evolution payment systems (Split Batch)">Evolution payment systems (Split Batch)</option><option value="Express MPS (Lockbox)">Express MPS (Lockbox)</option><option value="Fairwinds Credit Union (Lockbox)">Fairwinds Credit Union (Lockbox)</option><option value="Fargo Bank (Lockbox)">Fargo Bank (Lockbox)</option><option value="Federated Payment Systems (Lockbox)">Federated Payment Systems (Lockbox)</option><option value="Fidelity Deposit and Discount Bank (Lockbox)">Fidelity Deposit and Discount Bank (Lockbox)</option><option value="Fidelity Payment Services (Lockbox)">Fidelity Payment Services (Lockbox)</option><option value="Fiducial Processing Corporation (Lockbox)">Fiducial Processing Corporation (Lockbox)</option><option value="Fifth Third Bank (Lockbox)">Fifth Third Bank (Lockbox)</option><option value="Financial Transaction Services (Lockbox)">Financial Transaction Services (Lockbox)</option><option value="First American Payment Systems (Split Batch)">First American Payment Systems (Split Batch)</option><option value="First Bank Merchant Services (Lockbox)">First Bank Merchant Services (Lockbox)</option><option value="First Bankcard (Lockbox)">First Bankcard (Lockbox)</option><option value="First Banks Merchant Services (Lockbox)">First Banks Merchant Services (Lockbox)</option><option value="First Choice Merchants Inc (Lockbox)">First Choice Merchants Inc (Lockbox)</option><option value="First Citizens Bank (Lockbox)">First Citizens Bank (Lockbox)</option><option value="First Commonwealth (Lockbox)">First Commonwealth (Lockbox)</option><option value="First Data (Split Batch)">First Data (Split Batch)</option><option value="First Fidelity Bank (Lockbox)">First Fidelity Bank (Lockbox)</option><option value="First Financial Bank (Lockbox)">First Financial Bank (Lockbox)</option><option value="First Financial Merchant Services (Lockbox)">First Financial Merchant Services (Lockbox)</option><option value="First Hawaiian Bank (Lockbox)">First Hawaiian Bank (Lockbox)</option><option value="First Horizion (Lockbox)">First Horizion (Lockbox)</option><option value="First Interstate Bancard Corp (Lockbox)">First Interstate Bancard Corp (Lockbox)</option><option value="First Merchant Payment Systems (Lockbox)">First Merchant Payment Systems (Lockbox)</option><option value="First Merchant Services (Lockbox)">First Merchant Services (Lockbox)</option><option value="First National (Lockbox)">First National (Lockbox)</option><option value="First Niagara Merchant Services (Lockbox)">First Niagara Merchant Services (Lockbox)</option><option value="First Pay Solutions (Lockbox)">First Pay Solutions (Lockbox)</option><option value="First Payment Systems (Lockbox)">First Payment Systems (Lockbox)</option><option value="First State Bank (Lockbox)">First State Bank (Lockbox)</option><option value="First State Bank Of The Florida Keys (Lockbox)">First State Bank Of The Florida Keys (Lockbox)</option><option value="First State Bank Wheatland (Lockbox)">First State Bank Wheatland (Lockbox)</option><option value="Firstbank Credit Card Center (Lockbox)">Firstbank Credit Card Center (Lockbox)</option><option value="Firstbank Credit Card Center (Lockbox)">Firstbank Credit Card Center (Lockbox)</option><option value="Flashbanc (Lockbox)">Flashbanc (Lockbox)</option><option value="FMS (Lockbox)">FMS (Lockbox)</option><option value="FMS/STUART SIMMS (Lockbox)">FMS/STUART SIMMS (Lockbox)</option><option value="Focus Merchant Services LLC (Lockbox)">Focus Merchant Services LLC (Lockbox)</option><option value="Fortis Payment System (Split Batch)">Fortis Payment System (Split Batch)</option><option value="Forwardline Payment Services LLC (Lockbox)">Forwardline Payment Services LLC (Lockbox)</option><option value="Front Line (Lockbox)">Front Line (Lockbox)</option><option value="Frontstream Payments (Lockbox)">Frontstream Payments (Lockbox)</option><option value="Frost (Lockbox)">Frost (Lockbox)</option><option value="FSB">FSB</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="FTD (Lockbox)">FTD (Lockbox)</option><option value="FTS (Lockbox)">FTS (Lockbox)</option><option value="Fulton Bank">Fulton Bank</option><option value="N.A. (Lockbox)">N.A. (Lockbox)</option><option value="Funds Transfer Alliance">Funds Transfer Alliance</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Fusion Payment Systems (Lockbox)">Fusion Payment Systems (Lockbox)</option><option value="Future POS (Lockbox)">Future POS (Lockbox)</option><option value="GE Capital (Lockbox)">GE Capital (Lockbox)</option><option value="Global (Lockbox)">Global (Lockbox)</option><option value="Global Bankcard Systems (Lockbox)">Global Bankcard Systems (Lockbox)</option><option value="Global Electronic Technology (Lockbox)">Global Electronic Technology (Lockbox)</option><option value="Global Merchant Services (Lockbox)">Global Merchant Services (Lockbox)</option><option value="Global Processing System (Lockbox)">Global Processing System (Lockbox)</option><option value="Global Swift Merchant Services (Lockbox)">Global Swift Merchant Services (Lockbox)</option><option value="GOEL (Lockbox)">GOEL (Lockbox)</option><option value="Gotmerchant.com (Lockbox)">Gotmerchant.com (Lockbox)</option><option value="Grand Valley National Bank (Lockbox)">Grand Valley National Bank (Lockbox)</option><option value="Granite Payment Alliance (Lockbox)">Granite Payment Alliance (Lockbox)</option><option value="Graphite Payments (Lockbox)">Graphite Payments (Lockbox)</option><option value="Gravity Payments (Lockbox)">Gravity Payments (Lockbox)</option><option value="Graystone Bank (Lockbox)">Graystone Bank (Lockbox)</option><option value="GreenBank (Lockbox)">GreenBank (Lockbox)</option><option value="Greenlink Management Group (Lockbox)">Greenlink Management Group (Lockbox)</option><option value="Group ISO (Lockbox)">Group ISO (Lockbox)</option><option value="Gulf State Comm. Bank (Lockbox)">Gulf State Comm. Bank (Lockbox)</option><option value="Hancock Bank (Lockbox)">Hancock Bank (Lockbox)</option><option value="Hancock Merchant Services (Lockbox)">Hancock Merchant Services (Lockbox)</option><option value="HarborTouch (Lockbox)">HarborTouch (Lockbox)</option><option value="Heartland (Lockbox)">Heartland (Lockbox)</option><option value="Heritage Payment Solutions (Lockbox)">Heritage Payment Solutions (Lockbox)</option><option value="Herring Bank (Lockbox)">Herring Bank (Lockbox)</option><option value="Hi Tech Merchant Service">Hi Tech Merchant Service</option><option value="Inc (Lockbox)">Inc (Lockbox)</option><option value="Higher Standards">Higher Standards</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Highlands Union Bank (Lockbox)">Highlands Union Bank (Lockbox)</option><option value="Home State Bank (Lockbox)">Home State Bank (Lockbox)</option><option value="Honeytree Bankcard Services (Lockbox)">Honeytree Bankcard Services (Lockbox)</option><option value="Huntington Bank (Lockbox)">Huntington Bank (Lockbox)</option><option value="Hyep Standards (Lockbox)">Hyep Standards (Lockbox)</option><option value="i Payment (Lockbox)">i Payment (Lockbox)</option><option value="Icon Payment Solutions (Lockbox)">Icon Payment Solutions (Lockbox)</option><option value="Ifunds (Lockbox)">Ifunds (Lockbox)</option><option value="Imax (Lockbox)">Imax (Lockbox)</option><option value="IMAX Bancard Network (Lockbox)">IMAX Bancard Network (Lockbox)</option><option value="iMS (Lockbox)">iMS (Lockbox)</option><option value="Independent National Bank (Lockbox)">Independent National Bank (Lockbox)</option><option value="Indigo Payments (Lockbox)">Indigo Payments (Lockbox)</option><option value="Indyhost.net">Indyhost.net</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Infinitech (Lockbox)">Infinitech (Lockbox)</option><option value="Infinity Data Corporation (Lockbox)">Infinity Data Corporation (Lockbox)</option><option value="Innovative Merchant Solutions (Lockbox)">Innovative Merchant Solutions (Lockbox)</option><option value="Insight Credit Union (Lockbox)">Insight Credit Union (Lockbox)</option><option value="Integrated Card Service (Lockbox)">Integrated Card Service (Lockbox)</option><option value="Integrated Processing Solutions (Lockbox)">Integrated Processing Solutions (Lockbox)</option><option value="Integrity Merchant Solutions (Lockbox)">Integrity Merchant Solutions (Lockbox)</option><option value="Integrity Payment System (Split Batch)">Integrity Payment System (Split Batch)</option><option value="Intergrity Merchant Solutions (Lockbox)">Intergrity Merchant Solutions (Lockbox)</option><option value="International Bancard Corporation (Lockbox)">International Bancard Corporation (Lockbox)</option><option value="International Bank of Commerce (Lockbox)">International Bank of Commerce (Lockbox)</option><option value="International Merchant Services (Lockbox)">International Merchant Services (Lockbox)</option><option value="Intrust Bank (Lockbox)">Intrust Bank (Lockbox)</option><option value="Intuit Payment Solutions (Lockbox)">Intuit Payment Solutions (Lockbox)</option><option value="Investors Savings Bank (Lockbox)">Investors Savings Bank (Lockbox)</option><option value="Investors Savings Bank (Lockbox)">Investors Savings Bank (Lockbox)</option><option value="IRN Payment Systems (Split Batch)">IRN Payment Systems (Split Batch)</option><option value="Kennebunk Savings Bank (Lockbox)">Kennebunk Savings Bank (Lockbox)</option><option value="Key Merchants (Lockbox)">Key Merchants (Lockbox)</option><option value="Lake City Bank (Lockbox)">Lake City Bank (Lockbox)</option><option value="Landmark Merchant Solutions (Lockbox)">Landmark Merchant Solutions (Lockbox)</option><option value="Leaders">Leaders</option><option value="The Merchant Services CO. (Lockbox)">The Merchant Services CO. (Lockbox)</option><option value="Liberty Bankcard Services (Lockbox)">Liberty Bankcard Services (Lockbox)</option><option value="M &amp; T Bank (Lockbox)">M &amp; T Bank (Lockbox)</option><option value="Mainstream Merchant Services (Lockbox)">Mainstream Merchant Services (Lockbox)</option><option value="Marathon Solutions (Lockbox)">Marathon Solutions (Lockbox)</option><option value="Max Merchant Funding (Lockbox)">Max Merchant Funding (Lockbox)</option><option value="MBI Payment Services (Lockbox)">MBI Payment Services (Lockbox)</option><option value="MBI Solutions (Lockbox)">MBI Solutions (Lockbox)</option><option value="MDS (Lockbox)">MDS (Lockbox)</option><option value="Mechanics Bank (Lockbox)">Mechanics Bank (Lockbox)</option><option value="Mega M (Lockbox)">Mega M (Lockbox)</option><option value="Meramak (Lockbox)">Meramak (Lockbox)</option><option value="Mercantile Bank (Lockbox)">Mercantile Bank (Lockbox)</option><option value="Merchant Bankcard (Lockbox)">Merchant Bankcard (Lockbox)</option><option value="Merchant Billing Services (Lockbox)">Merchant Billing Services (Lockbox)</option><option value="Merchant Card Processing (Lockbox)">Merchant Card Processing (Lockbox)</option><option value="Merchant Concepts Inc (Lockbox)">Merchant Concepts Inc (Lockbox)</option><option value="Merchant Connect (Lockbox)">Merchant Connect (Lockbox)</option><option value="Merchant Credit Card Processing (Lockbox)">Merchant Credit Card Processing (Lockbox)</option><option value="Merchant Credit Card Processing (Lockbox)">Merchant Credit Card Processing (Lockbox)</option><option value="Merchant Data Systems (Lockbox)">Merchant Data Systems (Lockbox)</option><option value="Merchant Department (Lockbox)">Merchant Department (Lockbox)</option><option value="Merchant Direct (Lockbox)">Merchant Direct (Lockbox)</option><option value="Merchant E-Solutions (Lockbox)">Merchant E-Solutions (Lockbox)</option><option value="Merchant Hubb">Merchant Hubb</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Merchant Industry (Lockbox)">Merchant Industry (Lockbox)</option><option value="Merchant Lynx Services (Lockbox)">Merchant Lynx Services (Lockbox)</option><option value="Merchant Management Systems (Lockbox)">Merchant Management Systems (Lockbox)</option><option value="Merchant One (Lockbox)">Merchant One (Lockbox)</option><option value="Merchant One (Lockbox)">Merchant One (Lockbox)</option><option value="Merchant Processing Center (Lockbox)">Merchant Processing Center (Lockbox)</option><option value="Merchant Processing Services (Lockbox)">Merchant Processing Services (Lockbox)</option><option value="Merchant Processing">Merchant Processing</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Merchant Resources International Inc. (Lockbox)">Merchant Resources International Inc. (Lockbox)</option><option value="Merchant Service Center (Lockbox)">Merchant Service Center (Lockbox)</option><option value="Merchant Service Group (Lockbox)">Merchant Service Group (Lockbox)</option><option value="Merchant Services (Lockbox)">Merchant Services (Lockbox)</option><option value="Merchant Services (Lockbox)">Merchant Services (Lockbox)</option><option value="Merchant Services Direct (Lockbox)">Merchant Services Direct (Lockbox)</option><option value="Merchant Services Network (Lockbox)">Merchant Services Network (Lockbox)</option><option value="Merchant Store (Lockbox)">Merchant Store (Lockbox)</option><option value="Merchant Warehouse (Lockbox)">Merchant Warehouse (Lockbox)</option><option value="Merchantpro Express (Lockbox)">Merchantpro Express (Lockbox)</option><option value="Merchants Bancard Network (Lockbox)">Merchants Bancard Network (Lockbox)</option><option value="Merchants of America (Lockbox)">Merchants of America (Lockbox)</option><option value="Mercury Payment Systems (Lockbox)">Mercury Payment Systems (Lockbox)</option><option value="MeritCard Solutions LP (Lockbox)">MeritCard Solutions LP (Lockbox)</option><option value="Meritus Payment Solutions (Lockbox)">Meritus Payment Solutions (Lockbox)</option><option value="Merrick Bank (Lockbox)">Merrick Bank (Lockbox)</option><option value="Mersatech">Mersatech</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Micamp Merchant Services (Lockbox)">Micamp Merchant Services (Lockbox)</option><option value="Michigan Retailers Services">Michigan Retailers Services</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Midsouth Bank (Lockbox)">Midsouth Bank (Lockbox)</option><option value="Midwest Merchant Services (Lockbox)">Midwest Merchant Services (Lockbox)</option><option value="Midwest Transaction Group (Lockbox)">Midwest Transaction Group (Lockbox)</option><option value="MindBody Processing (Lockbox)">MindBody Processing (Lockbox)</option><option value="Mission Valley Bank (Lockbox)">Mission Valley Bank (Lockbox)</option><option value="MLS Direct Network (Lockbox)">MLS Direct Network (Lockbox)</option><option value="Momentum Payment Systems (Lockbox)">Momentum Payment Systems (Lockbox)</option><option value="Moneris Solutions (Lockbox)">Moneris Solutions (Lockbox)</option><option value="Money Movers of America (Lockbox)">Money Movers of America (Lockbox)</option><option value="Money Tree Merchant Services (Lockbox)">Money Tree Merchant Services (Lockbox)</option><option value="Mountain Valley Bank (Lockbox)">Mountain Valley Bank (Lockbox)</option><option value="Mountain West Bank (Lockbox)">Mountain West Bank (Lockbox)</option><option value="National Bank (Lockbox)">National Bank (Lockbox)</option><option value="National Card (Lockbox)">National Card (Lockbox)</option><option value="National E Payment (Lockbox)">National E Payment (Lockbox)</option><option value="National Merchant Center (Lockbox)">National Merchant Center (Lockbox)</option><option value="National Payment Processing (Lockbox)">National Payment Processing (Lockbox)</option><option value="National Penn Merchant Services (Lockbox)">National Penn Merchant Services (Lockbox)</option><option value="National Processing Company (Lockbox)">National Processing Company (Lockbox)</option><option value="National Processing Solutions Bank (Lockbox)">National Processing Solutions Bank (Lockbox)</option><option value="National Translink Corp (Lockbox)">National Translink Corp (Lockbox)</option><option value="Nationwide Payment Solutions (Lockbox)">Nationwide Payment Solutions (Lockbox)</option><option value="NCC Service (Lockbox)">NCC Service (Lockbox)</option><option value="NCCP (Lockbox)">NCCP (Lockbox)</option><option value="NCMIC Finance Corporation (Lockbox)">NCMIC Finance Corporation (Lockbox)</option><option value="NCR Merchant Solutions (Lockbox)">NCR Merchant Solutions (Lockbox)</option><option value="Net One (Lockbox)">Net One (Lockbox)</option><option value="Netcom PaySystem (Lockbox)">Netcom PaySystem (Lockbox)</option><option value="NewAlliance Bank (Lockbox)">NewAlliance Bank (Lockbox)</option><option value="Newtek Merchant Solutions (Lockbox)">Newtek Merchant Solutions (Lockbox)</option><option value="Nexgen (Lockbox)">Nexgen (Lockbox)</option><option value="Next Day Funding Merchant Services (Lockbox)">Next Day Funding Merchant Services (Lockbox)</option><option value="Nexus Payment Systems (Lockbox)">Nexus Payment Systems (Lockbox)</option><option value="North American BanCard (Lockbox)">North American BanCard (Lockbox)</option><option value="North Shore Community Bank (Lockbox)">North Shore Community Bank (Lockbox)</option><option value="Northern Payment Systems (Lockbox)">Northern Payment Systems (Lockbox)</option><option value="Northwest Savings Bank (Lockbox)">Northwest Savings Bank (Lockbox)</option><option value="Northwestern Bank (Lockbox)">Northwestern Bank (Lockbox)</option><option value="Nova (Lockbox)">Nova (Lockbox)</option><option value="NPC (Lockbox)">NPC (Lockbox)</option><option value="NPC Louisville (Lockbox)">NPC Louisville (Lockbox)</option><option value="NPC Louisville (Lockbox)">NPC Louisville (Lockbox)</option><option value="NPS (Lockbox)">NPS (Lockbox)</option><option value="NTrust Bancard (Lockbox)">NTrust Bancard (Lockbox)</option><option value="Ocean Equity Payment Solutions (Lockbox)">Ocean Equity Payment Solutions (Lockbox)</option><option value="Old Point National Bank (Lockbox)">Old Point National Bank (Lockbox)</option><option value="Old Point National Bank (Lockbox)">Old Point National Bank (Lockbox)</option><option value="Old Point National Bank (Lockbox)">Old Point National Bank (Lockbox)</option><option value="Omega Financial Solutions (Lockbox)">Omega Financial Solutions (Lockbox)</option><option value="Omega Processing Solutions (Lockbox)">Omega Processing Solutions (Lockbox)</option><option value="Omentum Payment systems (Lockbox)">Omentum Payment systems (Lockbox)</option><option value="One Pay Processing (Split Batch)">One Pay Processing (Split Batch)</option><option value="Online Data Corp (Lockbox)">Online Data Corp (Lockbox)</option><option value="Optimal Payments (Lockbox)">Optimal Payments (Lockbox)</option><option value="Orbis (Lockbox)">Orbis (Lockbox)</option><option value="Orion (Lockbox)">Orion (Lockbox)</option><option value="Payamerica (Lockbox)">Payamerica (Lockbox)</option><option value="Paygea (Lockbox)">Paygea (Lockbox)</option><option value="PayGOGO Merchant Services (Lockbox)">PayGOGO Merchant Services (Lockbox)</option><option value="Payment Alliance International (Split Batch)">Payment Alliance International (Split Batch)</option><option value="Payment Alliance International (Original) (Lockbox)">Payment Alliance International (Original) (Lockbox)</option><option value="Payment Express Systems (Lockbox)">Payment Express Systems (Lockbox)</option><option value="Payment Logistics (Lockbox)">Payment Logistics (Lockbox)</option><option value="Payment Processing Partners (Lockbox)">Payment Processing Partners (Lockbox)</option><option value="Payment Processing">Payment Processing</option><option value="Inc (Lockbox)">Inc (Lockbox)</option><option value="Payment Processor Inc (Lockbox)">Payment Processor Inc (Lockbox)</option><option value="Payment Resources International (Lockbox)">Payment Resources International (Lockbox)</option><option value="Payment Revolution LLC (Lockbox)">Payment Revolution LLC (Lockbox)</option><option value="Payment Solutions (Lockbox)">Payment Solutions (Lockbox)</option><option value="Payment Systems (Lockbox)">Payment Systems (Lockbox)</option><option value="Payment Tech (Lockbox)">Payment Tech (Lockbox)</option><option value="Paymerica (Lockbox)">Paymerica (Lockbox)</option><option value="PayPal (Lockbox)">PayPal (Lockbox)</option><option value="PayPros (Lockbox)">PayPros (Lockbox)</option><option value="Payprotec (Lockbox)">Payprotec (Lockbox)</option><option value="Payscape (Split Batch)">Payscape (Split Batch)</option><option value="Paysimple">Paysimple</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="PCI Professionals (Lockbox)">PCI Professionals (Lockbox)</option><option value="Pearl Capital Rivis Ventures LLC (Split Batch)">Pearl Capital Rivis Ventures LLC (Split Batch)</option><option value="Penn Security &amp; Trust (Lockbox)">Penn Security &amp; Trust (Lockbox)</option><option value="Peoples United Bank (Lockbox)">Peoples United Bank (Lockbox)</option><option value="Petroleum Card Services (Lockbox)">Petroleum Card Services (Lockbox)</option><option value="Petroleum Card Services (Lockbox)">Petroleum Card Services (Lockbox)</option><option value="PFC Payment Solutions (Lockbox)">PFC Payment Solutions (Lockbox)</option><option value="Pinnacle Processing Group (Split Batch)">Pinnacle Processing Group (Split Batch)</option><option value="Pioneer Payment Systems (Lockbox)">Pioneer Payment Systems (Lockbox)</option><option value="Pioneer Savings Bank (Lockbox)">Pioneer Savings Bank (Lockbox)</option><option value="Pipeline Data Processing (Lockbox)">Pipeline Data Processing (Lockbox)</option><option value="Pivotal Payments (Lockbox)">Pivotal Payments (Lockbox)</option><option value="Platinum Choice Bancard (Lockbox)">Platinum Choice Bancard (Lockbox)</option><option value="PNC Merchant Services (Lockbox)">PNC Merchant Services (Lockbox)</option><option value="POS Card Systems of California (Lockbox)">POS Card Systems of California (Lockbox)</option><option value="Powerhouse Payments (Lockbox)">Powerhouse Payments (Lockbox)</option><option value="PowerPay (Split Batch)">PowerPay (Split Batch)</option><option value="Practice Pay Solutions (Lockbox)">Practice Pay Solutions (Lockbox)</option><option value="Premier Americard Systems (Lockbox)">Premier Americard Systems (Lockbox)</option><option value="Premier Processing I (Lockbox)">Premier Processing I (Lockbox)</option><option value="Principal Chain (Lockbox)">Principal Chain (Lockbox)</option><option value="Prior Lake State Bank (Lockbox)">Prior Lake State Bank (Lockbox)</option><option value="Priority Payment Systems (Split Batch)">Priority Payment Systems (Split Batch)</option><option value="Process America (Lockbox)">Process America (Lockbox)</option><option value="Processing Point">Processing Point</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Prodigy Payment Systems (Lockbox)">Prodigy Payment Systems (Lockbox)</option><option value="Profit Point (Lockbox)">Profit Point (Lockbox)</option><option value="Prolific Payment Solutions">Prolific Payment Solutions</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Propay (Lockbox)">Propay (Lockbox)</option><option value="Propoint Card Services (Lockbox)">Propoint Card Services (Lockbox)</option><option value="Purepayments (Lockbox)">Purepayments (Lockbox)</option><option value="QNB (Lockbox)">QNB (Lockbox)</option><option value="Radiant Systems (Lockbox)">Radiant Systems (Lockbox)</option><option value="Rapid Capital Funding (Split Batch)">Rapid Capital Funding (Split Batch)</option><option value="RBS Lynk (Lockbox)">RBS Lynk (Lockbox)</option><option value="RedStone Payment Solutions (Lockbox)">RedStone Payment Solutions (Lockbox)</option><option value="Redwood Merchant Service (Lockbox)">Redwood Merchant Service (Lockbox)</option><option value="Regions Bank (Lockbox)">Regions Bank (Lockbox)</option><option value="Reliant (Lockbox)">Reliant (Lockbox)</option><option value="Renaissance (Lockbox)">Renaissance (Lockbox)</option><option value="RentPayment (Lockbox)">RentPayment (Lockbox)</option><option value="Republic Merchant Services (Lockbox)">Republic Merchant Services (Lockbox)</option><option value="Republic Payment Systems (Lockbox)">Republic Payment Systems (Lockbox)</option><option value="Retriever Payment Systems (Lockbox)">Retriever Payment Systems (Lockbox)</option><option value="Rockwall (Lockbox)">Rockwall (Lockbox)</option><option value="S&amp;T Bank (Lockbox)">S&amp;T Bank (Lockbox)</option><option value="Sage Payment Solutions (Split Batch)">Sage Payment Solutions (Split Batch)</option><option value="SECURE NET (Lockbox)">SECURE NET (Lockbox)</option><option value="Secure Payment Solutions (Lockbox)">Secure Payment Solutions (Lockbox)</option><option value="Security Card Serivces (Lockbox)">Security Card Serivces (Lockbox)</option><option value="Securus Payment (Lockbox)">Securus Payment (Lockbox)</option><option value="Select Banking (Lockbox)">Select Banking (Lockbox)</option><option value="Service First Processing (Lockbox)">Service First Processing (Lockbox)</option><option value="Service First Processing (Lockbox)">Service First Processing (Lockbox)</option><option value="Signapay (Lockbox)">Signapay (Lockbox)</option><option value="Simmons First (Lockbox)">Simmons First (Lockbox)</option><option value="SmartPay (Lockbox)">SmartPay (Lockbox)</option><option value="Soft Bankcard Services">Soft Bankcard Services</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Solveras (Lockbox)">Solveras (Lockbox)</option><option value="Source One Payment Solutions (Lockbox)">Source One Payment Solutions (Lockbox)</option><option value="Southsidebank (Lockbox)">Southsidebank (Lockbox)</option><option value="Sovereign Bank (Lockbox)">Sovereign Bank (Lockbox)</option><option value="Sovereign Merchant Services (Lockbox)">Sovereign Merchant Services (Lockbox)</option><option value="spectra Payments (Lockbox)">spectra Payments (Lockbox)</option><option value="Spectrum (Lockbox)">Spectrum (Lockbox)</option><option value="Square (Lockbox)">Square (Lockbox)</option><option value="SSP (Lockbox)">SSP (Lockbox)</option><option value="State Bank of Cross Plains (Lockbox)">State Bank of Cross Plains (Lockbox)</option><option value="Stellarone Bank (Lockbox)">Stellarone Bank (Lockbox)</option><option value="Sterling Payment (Lockbox)">Sterling Payment (Lockbox)</option><option value="Sterling Savings Bank (Lockbox)">Sterling Savings Bank (Lockbox)</option><option value="Suffolk County National Bank (Lockbox)">Suffolk County National Bank (Lockbox)</option><option value="Summit Merchant Soutions (Lockbox)">Summit Merchant Soutions (Lockbox)</option><option value="Sun National (Lockbox)">Sun National (Lockbox)</option><option value="Sunrise Business Services">Sunrise Business Services</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="SunTrust (Lockbox)">SunTrust (Lockbox)</option><option value="Superior Financial Systems">Superior Financial Systems</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="Susquehanna Bancshares (Lockbox)">Susquehanna Bancshares (Lockbox)</option><option value="Susquehanna Merchant Services (Lockbox)">Susquehanna Merchant Services (Lockbox)</option><option value="Swipely (Lockbox)">Swipely (Lockbox)</option><option value="Sync Payments (Lockbox)">Sync Payments (Lockbox)</option><option value="Synergyplus Merchant Solutions LLC (Lockbox)">Synergyplus Merchant Solutions LLC (Lockbox)</option><option value="TCF Merchant Services (Lockbox)">TCF Merchant Services (Lockbox)</option><option value="TCF National Bank (Lockbox)">TCF National Bank (Lockbox)</option><option value="Tcheck Systems">Tcheck Systems</option><option value="Inc (Lockbox)">Inc (Lockbox)</option><option value="TD Bank (Lockbox)">TD Bank (Lockbox)</option><option value="TD banknorth Merchant Service (Lockbox)">TD banknorth Merchant Service (Lockbox)</option><option value="Teledraft (Lockbox)">Teledraft (Lockbox)</option><option value="Teleflora (Lockbox)">Teleflora (Lockbox)</option><option value="Terment Merchant Services (Lockbox)">Terment Merchant Services (Lockbox)</option><option value="Tgate (Lockbox)">Tgate (Lockbox)</option><option value="The First N.A. (Lockbox)">The First N.A. (Lockbox)</option><option value="The Independent Bankers Bank (Lockbox)">The Independent Bankers Bank (Lockbox)</option><option value="The Washington Trust Co (Lockbox)">The Washington Trust Co (Lockbox)</option><option value="Tiangle Payment System (Lockbox)">Tiangle Payment System (Lockbox)</option><option value="Tiangle Payment Systems (Lockbox)">Tiangle Payment Systems (Lockbox)</option><option value="To Charge (Lockbox)">To Charge (Lockbox)</option><option value="Total Merchant Services (Lockbox)">Total Merchant Services (Lockbox)</option><option value="Townebank (Lockbox)">Townebank (Lockbox)</option><option value="Trans Com (Lockbox)">Trans Com (Lockbox)</option><option value="Transaction One (Lockbox)">Transaction One (Lockbox)</option><option value="Transaction Payment System (Lockbox)">Transaction Payment System (Lockbox)</option><option value="Transaction Solutions (Lockbox)">Transaction Solutions (Lockbox)</option><option value="Transactions First Merchant Solutions (Lockbox)">Transactions First Merchant Solutions (Lockbox)</option><option value="Transcendent (Lockbox)">Transcendent (Lockbox)</option><option value="Transcom (Lockbox)">Transcom (Lockbox)</option><option value="Transfirst (Split Batch)">Transfirst (Split Batch)</option><option value="Transnational Bankcard (Lockbox)">Transnational Bankcard (Lockbox)</option><option value="Transone Merchant Services (Lockbox)">Transone Merchant Services (Lockbox)</option><option value="Transtech Merchant Group (Lockbox)">Transtech Merchant Group (Lockbox)</option><option value="Transwipe (Lockbox)">Transwipe (Lockbox)</option><option value="TranTech (Lockbox)">TranTech (Lockbox)</option><option value="Triangle Payment Systems (Lockbox)">Triangle Payment Systems (Lockbox)</option><option value="Tribul Merchant Services (Lockbox)">Tribul Merchant Services (Lockbox)</option><option value="Trisource (Lockbox)">Trisource (Lockbox)</option><option value="Trust One Payment Services">Trust One Payment Services</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="TSYS Merchant Solutions (Lockbox)">TSYS Merchant Solutions (Lockbox)</option><option value="Tuition Express (Lockbox)">Tuition Express (Lockbox)</option><option value="Two Huntington Quadrangle (Lockbox)">Two Huntington Quadrangle (Lockbox)</option><option value="TX Direct">TX Direct</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="UBC (Lockbox)">UBC (Lockbox)</option><option value="UFS International (Lockbox)">UFS International (Lockbox)</option><option value="UMS Banking (Lockbox)">UMS Banking (Lockbox)</option><option value="Unified Merchant Services (Lockbox)">Unified Merchant Services (Lockbox)</option><option value="United Bank Card (Lockbox)">United Bank Card (Lockbox)</option><option value="United Merchant Processing Association (Lockbox)">United Merchant Processing Association (Lockbox)</option><option value="United Merchant Services (Lockbox)">United Merchant Services (Lockbox)</option><option value="United Merchant Services (Lockbox)">United Merchant Services (Lockbox)</option><option value="United Payment Services">United Payment Services</option><option value="Inc. (Lockbox)">Inc. (Lockbox)</option><option value="United States Bankcard Service">United States Bankcard Service</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="US Alliance Group (Lockbox)">US Alliance Group (Lockbox)</option><option value="US Bank (Lockbox)">US Bank (Lockbox)</option><option value="US Bankcard Services (Lockbox)">US Bankcard Services (Lockbox)</option><option value="US Data Capture Inc (Lockbox)">US Data Capture Inc (Lockbox)</option><option value="US Merchant Services (Lockbox)">US Merchant Services (Lockbox)</option><option value="US Merchant Systems (Lockbox)">US Merchant Systems (Lockbox)</option><option value="USA International Data Corp. (Lockbox)">USA International Data Corp. (Lockbox)</option><option value="USTransact">USTransact</option><option value="LLC (Lockbox)">LLC (Lockbox)</option><option value="Vacation Rent Payment (Lockbox)">Vacation Rent Payment (Lockbox)</option><option value="Valued Merchant Services (Lockbox)">Valued Merchant Services (Lockbox)</option><option value="Valuplus Merchant Assn (Lockbox)">Valuplus Merchant Assn (Lockbox)</option><option value="Vanguard Payment Systems (Lockbox)">Vanguard Payment Systems (Lockbox)</option><option value="Vantage Card Services (Lockbox)">Vantage Card Services (Lockbox)</option><option value="Vantiv (Lockbox)">Vantiv (Lockbox)</option><option value="Velocity Payment Systems (Lockbox)">Velocity Payment Systems (Lockbox)</option><option value="Veracity Payment Solutions (Lockbox)">Veracity Payment Solutions (Lockbox)</option><option value="Vietnamese Merchant Services (Lockbox)">Vietnamese Merchant Services (Lockbox)</option><option value="Vision Payment Solutions (Split Batch)">Vision Payment Solutions (Split Batch)</option><option value="VMS (Lockbox)">VMS (Lockbox)</option><option value="Volusion (Lockbox)">Volusion (Lockbox)</option><option value="voyager (Lockbox)">voyager (Lockbox)</option><option value="Wachovia Bank (Elavon) (Lockbox)">Wachovia Bank (Elavon) (Lockbox)</option><option value="Wachovia Bank National Association (Lockbox)">Wachovia Bank National Association (Lockbox)</option><option value="Washington Bancard MS LLC (Lockbox)">Washington Bancard MS LLC (Lockbox)</option><option value="Webster Bank (Lockbox)">Webster Bank (Lockbox)</option><option value="Wells Fargo Bank (Lockbox)">Wells Fargo Bank (Lockbox)</option><option value="WesBanco Merchant Services (Lockbox)">WesBanco Merchant Services (Lockbox)</option><option value="West Coast Bank (Lockbox)">West Coast Bank (Lockbox)</option><option value="West Coast Merchant Services (Lockbox)">West Coast Merchant Services (Lockbox)</option><option value="WestAmerica Bank (Lockbox)">WestAmerica Bank (Lockbox)</option><option value="Wholesale Merchant Group (Lockbox)">Wholesale Merchant Group (Lockbox)</option><option value="Wholesale Merchant Processing (Lockbox)">Wholesale Merchant Processing (Lockbox)</option><option value="Wholesale Payments Inc. (Lockbox)">Wholesale Payments Inc. (Lockbox)</option><option value="Wilson Bank and Trust (Lockbox)">Wilson Bank and Trust (Lockbox)</option><option value="Wind River Financial (Lockbox)">Wind River Financial (Lockbox)</option><option value="Wise Payment Systems (Lockbox)">Wise Payment Systems (Lockbox)</option><option value="Woodforest National Bank (Lockbox)">Woodforest National Bank (Lockbox)</option><option value="World Bankcard Services (Lockbox)">World Bankcard Services (Lockbox)</option><option value="World Data Systems (Lockbox)">World Data Systems (Lockbox)</option><option value="World Payment Services (Lockbox)">World Payment Services (Lockbox)</option><option value="WorldPay (Lockbox)">WorldPay (Lockbox)</option><option value="WSFS Bank (Lockbox)">WSFS Bank (Lockbox)</option><option value="Xenex Merchant Services (Lockbox)">Xenex Merchant Services (Lockbox)</option>
+</select></p>
+
+<p class="mercPr" style="display:none"><input type="text"  class="IN1 ipsm1" title="Merchant Id" maxlength="9" placeholder="Merchant Id" name="merchantid" id="merchantid" required /></p>
+</div>
+
+
+<div class="rw_lin clearfix">  
+<div class="labl_tx2">List the total VISA/MasterCard processing volumes from previous four months</div>
+<div class="labl_tx">Last Month</div>
+<p class="imp50"><input type="text"  class="IN1 ipsm3" name="MonthlyVolumeAmountsList1" id="MonthlyVolumeAmountsList1" title="Sales Amount"   placeholder="Sales Amount" required /></p>
+<p class="imp50"><input type="text" class="IN1 ipsm3"  name="MonthlyVolumeTicketsList1" id="MonthlyVolumeTicketsList1" title="Number of Transactions"   placeholder="Number of Transactions" required /></p>
+</div>
+
+<div class="rw_lin clearfix">  
+<div class="labl_tx">1 Month Ago</div>
+<p class="imp50"><input type="text"  class="IN1 ipsm3" name="MonthlyVolumeAmountsList2" id="MonthlyVolumeAmountsList2" title="Sales Amount"   placeholder="Sales Amount" required /></p>
+<p class="imp50"><input type="text" class="IN1 ipsm3"  name="MonthlyVolumeTicketsList2" id="MonthlyVolumeTicketsList2" title="Number of Transactions"   placeholder="Number of Transactions" required /></p>
+</div>
+
+
+<div class="rw_lin clearfix">  
+<div class="labl_tx">2 Month Ago</div>
+<p class="imp50"><input type="text"  class="IN1 ipsm3" name="MonthlyVolumeAmountsList3" id="MonthlyVolumeAmountsList3" title="Sales Amount"   placeholder="Sales Amount" required /></p>
+<p class="imp50"><input type="text" class="IN1 ipsm3"  name="MonthlyVolumeTicketsList3" id="MonthlyVolumeTicketsList3" title="Number of Transactions"   placeholder="Number of Transactions" required /></p>
+</div>
+
+
+<div class="rw_lin clearfix">  
+<div class="labl_tx">3 Month Ago</div>
+<p class="imp50"><input type="text"  class="IN1 ipsm3" name="MonthlyVolumeAmountsList4" id="MonthlyVolumeAmountsList4" title="Sales Amount"   placeholder="Sales Amount" required /></p>
+<p class="imp50"><input type="text" class="IN1 ipsm3"  name="MonthlyVolumeTicketsList4" id="MonthlyVolumeTicketsList4" title="Number of Transactions"   placeholder="Number of Transactions" required /></p>
+</div>
+
+</div>
+<!-- credit accepted--></div>
+</div>
+</div>
+
+<div class="rws clearfix">
+<div class="lftitb">Does your business have outstanding debt?</div>
+<div class="rw_lin clearfix">  
+<div class="rwfil">
+<span><input type="radio" class="outDebt" name="debttype" id="debttype" value="1" /><label for="yes">Yes</label></span>
+<span><input type="radio" class="outDebt" name="debttype" id="debttype" value="0" /><label for="no">No</label></span>
+</div></div>
+
+<div class="rwfil">
+<!-- outstanding debt--><div id="outsta_debt" class="showfilds_bx">
+<div class="rw_lin clearfix"> 
+
+<p class="imp40"><select title="Select Debt Type" class="IN5" id="selectdebttype" name="selectdebttype">
+<option value="">Select Debt Type</option>
+</select></p>
+
+
+<p class="imp40"><select title="Select Disbursed Year" class="IN5" id="selDisbursed" name="selDisbursed">
+<option value="">Select Disbursed Year</option>
+</select></p>
+
+<p><a href="#" class="rem_col">Remove</a></p>
+</div>
+
+
+<div class="rw_lin clearfix"> 
+<a href="javascript:;" class="add_oth"  onClick="addInput();" >Add Another Loan</a>
+</div>
+
+
+
+</div><!-- outstanding debt-->
+</div>
+
+</div>
+
+<div class="rws clearfix">
+<div class="lftitb">Business Property Information</div>
+<div class="rwfil"><div class="rw_lin clearfix"> 
+<span><input type="radio" class="businf" name="busproInfo" id="busproInfo" value="1" /><label for="yes">Owned</label></span>
+<span><input type="radio" class="businf" name="busproInfo" id="busproInfo" value="0" /><label for="no">leased</label></span>
+</div></div>
+<div class="rwfil"><!-- bus info bx--><div id="busInfobx" class="showfilds_bx">
+
+<div class="rw_lin clearfix">  
+<div class="labl_tx">Is there any outstanding mortgage?</div>
+<span><input  name="outstandingMort" type="radio" id="outstandingMort" value="1" checked /><label for="yes">Yes</label></span>
+<span><input type="radio"  name="outstandingMort" id="outstandingMort" value="0" /><label for="no">No</label></span>
+</div>
+<div class="rw_lin clearfix">  
+<input type="text" name="busi_mort_bank" id="busi_mort_bank" class="IN4c" title="Mortgage Bank" placeholder="Mortgage Bank" />
+<input type="text" name="busi_out_balance" id="busi_out_balance" class="IN4c"    title="Outstanding Balance" placeholder="Outstanding Balance" />
+<input type="text" name="busi_month_mort_amount" id="busi_month_mort_amount" class="IN4c" title="Monthly Mortgage Amount" placeholder="Monthly Mortgage Amount"  />
+</div>
+
+</div><!-- bus info bx--></div>
+
+<div class="rwfil"><!-- bus info bx--><div id="busInfobx2" class="showfilds_bx"><div class="rw_lin clearfix">  
+ <input type="text" name="busi_month_rent" id="busi_month_rent" class="IN4c" title="Monthly Rent" placeholder="Monthly Rent" />
+            <input type="text" name="busi_landlord" id="busi_landlord"  class="IN4c"  title="Landlord Name" placeholder="Landlord Name" />
+            <input type="text" name="busi_cont_number" id="busi_cont_number" class="IN4c"  title="Contact Number" placeholder="Contact Number" />
+</div></div><!-- bus info bx--></div>
+
+</div>
+
+
+<div class="rws clearfix">
+<div class="lftitb">Please describe the business's assets <br>
+<em>(Check all that apply)</em>
+</div>
+<div class="rwfilbc">
+<span><input name="" type="checkbox" value=""> <label>Real Estate</label> </span>
+<span><input name="" type="checkbox" value=""> <label>Inventory</label> </span>
+<span><input name="" type="checkbox" value=""> <label>Equipment Financing</label> </span>
+<span><input name="" type="checkbox" value=""> <label>Account Receivables</label> </span>
+</div></div>
+
+</div></article>
+
+<article id="aplicn_btm"><div class="warps">
+<div class="coln">
+<input name="" type="submit" value="Save &amp; Exit" class="BTgry"> <input name="next" type="submit" id="next" value="Next"  class="BTgren">
+</div>
+</div></article>
+
+
+</form> 
+</section>
+    </div>
+</div>

@@ -1,139 +1,436 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <link href="styles/main.css" rel="stylesheet" />
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <link href="kendo/styles/kendo.common.min.css" rel="stylesheet" />
+        <link href="kendo/styles/kendo.default.min.css" rel="stylesheet" />
+        <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" /> 
+		<link href="styles/tipsy.css" type="text/css" />
+        <link href="styles/dsh_skin2.css" type="text/css" />
+		<link href="styles/main.css" rel="stylesheet" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <script src="cordova.js"></script>
+        <script src="kendo/js/jquery.min.js"></script>
+        <script src="kendo/js/kendo.all.min.js"></script>
+        <script src="kendo/js/numeral.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/login.js"></script>
+		<script src="scripts/signup.js"></script>
+        <script src="scripts/homepage.js"></script>
+        <script src="scripts/documents.js"></script>
+        <script src="scripts/schedule.js"></script>
+        <script src="scripts/movedocs.js"></script>
+        <script src="scripts/fileExport.js"></script>
+        <script src="scripts/loanApp.js"></script>
+        <script src="Plugins/SocialSharing/www/SocialSharing.js"></script>
+        <script  src="scripts/main.js"></script>
+        <script  src="scripts/jquery.tipsy.js"></script>
+        <script src="scripts/jquery.validate.js"></script>
+        <script src="scripts/application_validate.js"></script>
+        </head>
+    <body>
+        <!--Home-->
+        <span id="staticNotification"></span>
+        <div id="tabstrip-home" data-role="view" class="home"  data-before-show="app.homesetting.viewModel.homeShow" data-model="app.homesetting.viewModel">
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">
+                        <div class="logo"><img src="styles/images/bizDoc-logo.png"></div>
+                    </span>
+                    <a data-align="right" data-rel="popover" href="#popover-people" data-role="button" class="popup"></a>
+                </div>
+            </div>
+            <div class="view-content">
+                <div id="homePage" data-template="homepage-listview-template">
+                    <div id="blackBlk">
+                        
+                        <div class="warps">
+                            <div class="desbrdIcon clearfix">
+                                
+                                <div class="span clearfix">Dashboard </div>
+                            </div>
+                            <article class="clearfix" id="dashview">
+                                <div class="warps clearfix" data-bind="visible: repaymentStatus">
+                                <div id="repypm" class="clearfix repaydetail">
+                                <h2>Outstanding Loan Repayment Details</h2>
 
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 
-    <script src="scripts/app.js"></script>
-    <script src="scripts/login.js"></script>
-    <script src="scripts/location.js"></script>
-    <script src="scripts/weather.js"></script>
-</head>
-<body>
-    <!--Home View-->
-    <div id="tabstrip-home"
-        data-role="view"
-        data-title="Home">
-        <header data-role="header">
+                                </div>
+                                    
+                                </div>
+                                <div class="warps clearfix">
+                                    <div id="stps">
+                                        
+                                        <ul>
+
+                                            <li class="dn"  id="container" >
+                                                <div class="reld_info removeBtn" data-bind="click: setToolTips" data-role="button">
+                                                    <strong>0</strong><span>Get Started</span>
+                                                </div>
+                                                <span class="dnar"></span>
+												<article class="toltip" id="home-tools-tips" data-bind="visible: toolStatus">
+                                                        <span  data-bind="visible: LoanAmt">Loan Amount<span data-bind="text: LoanAmt"></span></span>
+                                                        <span data-bind="visible: YearsBus">Years in Business<span data-bind="text: YearsBus"></span></span>
+                                                        <span data-bind="visible: AnnnualRevenue">Annual Revenue<span data-bind="text: AnnnualRevenue"></span></span>
+                                                        <span data-bind="visible: CreditScore">Credit Score<span data-bind="text: CreditScore"></span></span>
+                                                        <span>Name<span data-bind="text: name"></span></span>
+                                                        <span>Email<span data-bind="text: email"></span></span>
+                                                        <span>Phone<span data-bind="text: phone"></span></span>
+                                                    <span class="artclArow"></span>
+                                                </article>    
+                                                
+                                            </li>
+
+                                            <li class="activ">
+                                                <div>
+                                                    <strong>1</strong><span>Application</span>
+                                                </div><span class="dnar"></span>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <strong>2</strong><span>Matches</span>
+                                                </div><span class="dnar"></span>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <strong>3</strong><span>Request(s) Pending</span>
+                                                </div><span class="dnar"></span>
+                                            </li>
+                                            <li>
+                                                <div>
+                                                    <strong>&nbsp;</strong><span>Funded</span>
+                                                </div><span class="dnar"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="clearfix" id="stpSumAc">
+                                        <div class="stpsumry">
+                                            <h2 data-bind="text: dHeader"></h2>
+                                            <p data-rore="scroller" data-bind="text: dDescription"></p>
+                                        </div>
+
+                                        <div class="stpcurrntAc">
+                                            <div id="home-call-btn">
+                                            	<a class="btngr" href="#" data-bind="text: dButtonText"></a>
+                                            </div>
+                                            <p>
+                                                <a href="#tabstrip-scall" data-rel="modalview" data-role="button">
+                                                    <strong>Schedule a Call</strong>
+                                                </a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-role="footer">
+                <div data-role="navbar" class="documentClick">
+                    <a href="views/documents.html" data-role="button">
+                        <img src="styles/images/ic_launcher.png"><span>Documents</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div data-role="popover" class="popupBox refreshPop" id="popover-people" >
+                <div data-role="view" data-model="app.loginService.viewModel">
+                    <ul data-role="listview">
+                        <li data-bind="click: refreshHome" >Refresh</li>
+                        <li data-bind="click: onSettingPage">Settings</li>
+                         <li data-bind="click: setUserLogout">Logout</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--Login-->
+        <div id="tabstrip-login" data-role="view" data-model="app.loginService.viewModel" >
+
+            <div class="view-content">
+                <div class="logLogo"></div>
+                <h1 class="welcome" data-bind="visible: isLoggedIn">
+                    Welcome, <span data-bind="text: username"></span>!
+                </h1>
+                <div class="buttonArea">
+                    <input type="submit" id="logout" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" class="login-button" value="Logout" />
+                </div>
+
+                <form id="loginForm" data-bind="events: { keyup: checkEnter }" class="loginSection">
+                    <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                        <li>
+                            <label>
+                                <input type="text" id="loginusername" data-bind="value: username" placeholder="Username"/>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="password" id="loginpassword" data-bind="value: password" placeholder="Password" />
+                            </label>
+                        </li>
+                    </ul>
+
+                    <div class="buttonArea">
+                        <input type="submit" id="login" data-role="button" data-bind="click: validateUser, invisible: isLoggedIn" class="login-button" value="Login" />
+                    </div>
+                </form>
+               <div data-align="left"><a href="#tabstrip-forgot-pass" class="forgtpass">Forgot password?</a></div>
+                <div data-align="right">
+                    <a href="#tabstrip-sign-up"class="forgtpass">New User? Create an Account</a></div>
+            </div>
+
+        </div>
+        <!--Forgot password-->
+        <div id="tabstrip-forgot-pass" data-role="view" data-show="app.loginService.viewModel.initSetForgotPage" data-model="app.loginService.viewModel" >
+            <div data-role="header">
             <div data-role="navbar">
-                <span data-role="view-title"></span>
-                <a id="skin-change" data-role="button" data-align="right" data-click="app.changeSkin">Flat</a>
+                <span data-role="view-title">
+                    <div class="matches-logo"><a href="#tabstrip-login">Back</a></div>
+                </span>
             </div>
-        </header>
-
-        <h3>Welcome!</h3>
-        <p>
-            Telerik AppBuilder&trade; enables you to build cross-platform device applications regardless of your
-            development platform by combining the convenience of a local development toolset with the
-            power and flexibility of the cloud.
-        </p>
-        <div class="welcome-image"></div>
-    </div>
-
-    <!--Login View-->
-    <div id="tabstrip-login"
-        data-role="view"
-        data-title="Login"
-        data-model="app.loginService.viewModel">
-
-        <div class="logo-image"></div>
-        <div>
-            <h3 data-bind="visible: isLoggedIn">Welcome, <span data-bind="    text: username"></span>!</h3>
-            <input id="logout" type="submit" data-role="button" data-bind="click: onLogout, visible: isLoggedIn" value="Logout" class="login-button" />
-        </div>
-        <form data-bind="events: { keyup: checkEnter }">
-            <h3 data-bind="invisible: isLoggedIn">Enter your credentials:</h3>
-            <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
-                <li>
-                    <label>
-                        <div>Username</div>
-                        <input type="text" data-bind="value: username" />
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <div>Password</div>
-                        <input type="password" data-bind="value: password" />
-                    </label>
-                </li>
-            </ul>
-            <input id="login" type="submit" data-role="button" data-bind="click: onLogin, invisible: isLoggedIn" value="Login" class="login-button" />
-        </form>
-    </div>
-
-    <!--Location View-->
-    <div id="tabstrip-location"
-        data-role="view"
-        data-title="Location"
-        data-init="app.locationService.initLocation"
-        data-show="app.locationService.show"
-        data-hide="app.locationService.hide"
-        data-model="app.locationService.viewModel"
-        data-stretch="true">
-
-        <div id="map-canvas" class="map" data-bind="visible: isGoogleMapsInitialized"></div>
-
-        <div id="no-map" data-bind="invisible: isGoogleMapsInitialized">
-            <h3>Location requires internet connection to display the map.</h3>
-        </div>
-        <div id="map-search-wrap" class="map-tools" data-bind="visible: isGoogleMapsInitialized">
-            <div>
-                <button id="map-navigate-home" class="map-tools-button home" data-bind="click: onNavigateHome"></button>
-                <input id="map-address" type="search" class="map-tools-input" data-bind="value: address" placeholder="Address" />
-                <button id="map-search" class="map-tools-button search" data-bind="click: onSearchAddress"></button>
             </div>
-        </div>
-    </div>
+            <div class="view-content">
+                <h2>
+                	<div>
+                        <img src="styles/images/keyy.jpg" alt="Forgot Password">
+                        <span>Forgot Password?</span>
+                        
+                    </div>
+                </h2>
+                <form id="forgotpass" data-bind="events: { keyup: checkEnterForForgot }" class="loginSection">
+                    <p class="forgot-text">Please enter the Email Address you had provided while creating your account.</p>
+                    <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                        <li>
+                            <label>
+                                <input id="forgotpassfield" type="text" data-bind="value: forgotmail" placeholder="Email"/>
+                            </label>
+                        </li> 
+                    </ul>
 
-    <!--Weather View-->
-    <div id="tabstrip-weather"
-        data-role="view"
-        data-title="Weather"
-        data-model="app.weatherService.viewModel">
-
-        <ul data-role="listview" data-style="inset"
-            data-bind="source: weatherDataSource"
-            data-template="weather-forecast-template">
-        </ul>
-    </div>
-
-    <!--Weather forecast template-->
-    <script id="weather-forecast-template" type="text/x-kendo-tmpl">
-        <div class="w-item-template">
-            <span class="w-icon ${image}"></span>
-            <h4 class="w-date">${day}</h4>
-            <div class="w-temp">
-                <span>${highTemperature}<sup>&deg;</sup></span>
-                <span>${lowTemperature}<sup>&deg;</sup></span>
+                    <div class="buttonArea">
+                        <input type="submit" id="login" data-role="button" data-bind="click: forgotMailSend, invisible: isLoggedIn" class="login-button" value="Send Now" />
+                    </div>
+                </form>
             </div>
-        </div>
-    </script>
 
-    <!--Layout-->
-    <div data-role="layout" data-id="tabstrip-layout">
-        <!--Header-->
-        <div data-role="header">
+        </div>
+        <!--Create New User-->
+        <div id="tabstrip-sign-up" data-role="view" data-show="app.signupService.viewModel.signUpFormShow" data-model="app.signupService.viewModel" >
+            <div data-role="header">
             <div data-role="navbar">
-                <span data-role="view-title"></span>
+                <span data-role="view-title">
+                    <div class="matches-logo"><a href="#tabstrip-login">Back</a></div>
+                </span>
             </div>
-        </div>
+            </div>
+            <div class="view-content">
+                <form id="newuser" data-bind="events: { keyup: checkEnterSignUp }" class="">
+                    <ul data-role="listview" data-style="inset" data-bind="invisible: isLoggedIn">
+                        <li>
+                            <label>
+                            <select class="inp_sl k-dropdown-wrap k-state-default k-state-hover" id="loanAmount" name="loanAmount" data-icon="\e000" data-bind="value: loanAmount" style="color: rgb(51, 51, 51);">
+                                <option value="0" selected>Loan Amount You Need</option>
+                                <option value="15000">Less than $15,000</option>
+                                <option value="22500">$15,000 - $29,999</option>
+                                <option value="37500">$30,000 - $44,999</option>
+                                <option value="60000">$45,000 - $74,999</option>
+                                <option value="112500">$75,000 - $149,999</option>
+                                <option value="225000">$150,000 - $300,000</option>
+                                <option value="300000">More than $300,000</option>
+                            </select>
+                            </label>
+                        </li> 
+                        <li>
+                            <label>
+                                <select name="year" id="year" class="inp_sl" data-bind="value: yearInBussiness" style="color: rgb(51, 51, 51);">
+                                    <option value="0">Years in Business</option>
+                                    <option value="0-1">0-1</option>
+                                    <option value="1-2">1-2</option>
+                                    <option value="2-5">2-5</option>
+                                    <option value="6-50">5+</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <select class="inp_sl" id="annual_revenue" name="annual_revenue" data-bind="value: yourAnnualRevenue" style="color: rgb(51, 51, 51);">
+                                    <option value="0">Your Annual Revenue</option>
+                                    <option value="30000">Less than $30,000</option>
+                                    <option value="52500">$30,000 - $74,999</option>
+                                    <option value="112500">$75,000 - $149,999</option>
+                                    <option value="225000">$150,000 - $299,999</option>
+                                    <option value="400000">$300,000 - $499,999</option>
+                                    <option value="750000">$500,000 - $999,999</option>
+                                    <option value="3000000">$1 million - $5 million</option>
+                                    <option value="5000000">More than $5 million</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <select name="credittype" id="credittype" class="inp_sl" data-bind="value: yourCreditScore" style="color: rgb(51, 51, 51);">
+                                    <option value="0" selected="">Your Credit Score</option>
+                                    <option value="721-850">Excellent (720+)</option>
+                                    <option value="660-720">Good (660-720)</option>
+                                    <option value="600-659">Fair (600-659)</option>
+                                    <option value="520-599">Poor (&lt;600)</option>
+                                    <option value="500-611">Not Sure</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="text" id="nuYourName" data-bind="value: yourName" placeholder="Your Name"/>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="text" id="nuYourEmail" data-bind="value: yourEmail" placeholder="Email"/>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="text" id="nuYourPhone" data-bind="value: yourPhone" placeholder="Phone" maxlength="10"/>
+                            </label>
+                        </li>
+                    </ul>
 
-        <!--Footer-->
-        <div data-role="footer">
-            <div data-role="tabstrip">
-                <a href="#/" data-icon="home">Home</a>
-                <a href="#tabstrip-login" data-icon="contacts">Login</a>
-                <a href="#tabstrip-location" data-icon="search">Location</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+                    <div class="buttonArea">
+                        <input type="submit" id="login" data-role="button" data-bind="click: newUserForb2c, invisible: isLoggedIn" class="login-button" value="Sign Up For Biz2Credit" />
+                    </div>
+                </form>
             </div>
+
         </div>
-    </div>
-</body>
+         <!--Setting Page-->
+        <div id="tabstrip-Setting" data-role="view" data-model="app.loginService.viewModel">
+
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title">
+                    	<a class="docs-back" data-role="backbutton">Back</a>
+                    	<p class="docs-docu" data-bind="invisible: showfilter">Settings</p>
+                    </span>
+                </div>
+            </div>
+            <div  data-role="content">
+				<p class="Setting-ac">Biz2Credit Account</p>
+            	<ul id="settingpage">
+                    <li><span>Name: </span><span data-bind="text: name"></span></li>
+                    <li> <span>Email: </span><span data-bind="text: email"></span></li>
+                </ul>
+            </div>
+
+        </div>
+        <!--Schedule a Call-->
+        <div id="tabstrip-scall" class="schedulePopup" data-role="modalview"  data-model="app.scheduleService.viewModel" style="width:100%">
+
+            <div class="view-content">
+                <h3>Schedule a FREE Loan Consultation</h3>
+                <form id="scheduleForm" class="scheduleSection">
+                    <input type="text" data-bind="value: phonenumber" class="phoneNumber" maxlength="10" placeholder="Phone Number"/>
+
+                    <ul data-role="listview" data-style="inset">
+                        <li>
+                            <label>
+                                <input id="datepicker" placeholder="Select Date" data-bind="value: sDate"/>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input id="timepicker" placeholder="Select Time"/>
+                            </label>
+                        </li>
+                    </ul>
+                    <p class="scall-text">
+                        Choose a date & time in EST(Eastern Standard Time)
+                    </p>
+                    <div class="buttonArea">
+                        <input type="submit" data-role="button" data-bind="click: ScheduleCloseModalView" value="Cancel" />
+                        <input type="submit" id="schedule" data-role="button" data-bind="click: validateSchedule" class="schedule-button" value="Schedule" />
+                    </div>
+                </form>
+            </div>
+
+        </div>
+         <!--home message 1-->
+        <div id="tabstrip-mess-one" class="modal-mess-one" data-role="modalview"  data-modal="false"  style="width:100%">
+
+            <div class="closeBt clearfix">
+                <a data-role="button"  data-click="closeModalView">Close</a>
+             </div>
+                <p>To start  your application, please log on to the web version of Biz2Credit.com</p>
+                
+            
+
+        </div>
+        <!--home message 2-->
+        <div id="tabstrip-mess-two" class="modal-mess-one" data-role="modalview" data-modal="false"  style="width:100%">
+
+           <div class="closeBt clearfix">
+                <a data-role="button"  data-click="closeModalView">Close</a>
+               </div>
+                <p>To complete your application, please log on to the web version of Biz2Credit.com</p>
+                
+            
+
+        </div>
+        <!--home message 3-->
+        <div id="tabstrip-mess-third" class="modal-mess-one" data-role="modalview"  data-modal="false"  style="width:100%">
+
+            <div class="closeBt clearfix">
+                <a data-role="button"  data-click="closeModalView">Close</a>
+                </div>
+                <p>To avail this feature, Please log on to the web version of Biz2Credit.com</p>
+                
+        </div>
+        <!--home message 3-->
+        <div id="tabstrip-mess-fourth" class="reqWindow modal-mess-four" data-role="modalview"  style="width:100%">
+
+            <div class="reqWindow">
+                <h4>Required Documents<div class="closeBt clearfix">
+                <a data-role="button"  data-click="closeModalView">Close</a>
+                </div></h4> 
+                
+                </div>
+                <p class="doc-content"></p>
+                
+        </div>
+      
+       <!--home message 3-->
+        <div id="tabstrip-mess-dynamic" class="modal-mess-one" data-role="modalview"  style="width:100%">
+
+            <div class="closeBt clearfix">
+                <a data-role="button"  data-click="closeModalView">Close</a>
+                </div>
+                <p></p>
+                
+        </div>
+        <!--Layout-->
+        <div data-role="layout" data-id="tabstrip-layout">
+
+            <!--Header-->
+            <div data-role="header">
+                <div data-role="navbar">
+                    <span data-role="view-title"></span>
+                </div>
+            </div>
+            <!--Footer-->
+        </div>
+        
+        <script>
+           
+            function closeModalView(e) {
+            	var modalView = e.sender.element.closest("[data-role=modalview]").data("kendoMobileModalView");
+            	modalView.close();
+          }
+            
+        </script>
+
+    </body>
 </html>
